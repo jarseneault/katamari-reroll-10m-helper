@@ -1,0 +1,3205 @@
+{
+ "source": "Katamari Damacy REROLL (Steam) - mission 21 \"Make the North Star\"",
+ "objects": [
+  {
+   "id": 394,
+   "name": "\"All You Can Eat\"",
+   "ja": "クイホウダイノボリ",
+   "size": "2m8cm5mm",
+   "volume": 0.4747498035430908,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 208.5
+  },
+  {
+   "id": 951,
+   "name": "\"Don't Rush Out!\"",
+   "ja": "コウツウコゾウ",
+   "size": "1m43cm5mm",
+   "volume": 0.1548359990119934,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 143.5
+  },
+  {
+   "id": 240,
+   "name": "\"No Parking\" Sign",
+   "ja": "チュウシャキンシ",
+   "size": "1m17cm9mm",
+   "volume": 0.08593166619539261,
+   "placed": 1,
+   "gain": 0.6000000238418579,
+   "catchCm": 117.9
+  },
+  {
+   "id": 395,
+   "name": "\"On Sale\" Banner",
+   "ja": "ノボリ",
+   "size": "2m19cm5mm",
+   "volume": 0.5538747310638428,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 219.5
+  },
+  {
+   "id": 1042,
+   "name": "Abalone Diver",
+   "ja": "アマサン",
+   "size": "1m64cm4mm",
+   "volume": 0.23298344016075134,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 164.4
+  },
+  {
+   "id": 296,
+   "name": "Advertising Balloon",
+   "ja": "アドバルーン",
+   "size": "11m35cm2mm",
+   "volume": 76.61001586914062,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1135.2
+  },
+  {
+   "id": 618,
+   "name": "Apartment Building",
+   "ja": "マンション",
+   "size": "31m71cm4mm",
+   "volume": 1670.151611328125,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 3171.4
+  },
+  {
+   "id": 303,
+   "name": "Arcade Machine",
+   "ja": "キョウタイ",
+   "size": "2m75cm5mm",
+   "volume": 1.0950106382369995,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 275.5
+  },
+  {
+   "id": 596,
+   "name": "Balloon Man",
+   "ja": "フウセンオジサン",
+   "size": "2m34cm",
+   "volume": 0.6713839769363403,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 234.0
+  },
+  {
+   "id": 1120,
+   "name": "Balloon Shop",
+   "ja": "フーセンヤ",
+   "size": "13m48cm4mm",
+   "volume": 128.37686157226562,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1348.4
+  },
+  {
+   "id": 1121,
+   "name": "Balloon Shop Sign",
+   "ja": "フーセンカンバン",
+   "size": "2m51cm4mm",
+   "volume": 0.8326011300086975,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 251.4
+  },
+  {
+   "id": 1145,
+   "name": "Bamboo Fence",
+   "ja": "タケガキ",
+   "size": "96cm9mm",
+   "volume": 0.04775046557188034,
+   "placed": 19,
+   "gain": 0.800000011920929,
+   "catchCm": 96.9
+  },
+  {
+   "id": 840,
+   "name": "Banana Bunch",
+   "ja": "フサバナナ",
+   "size": "40cm6mm",
+   "volume": 0.0035170395858585835,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 40.6
+  },
+  {
+   "id": 1095,
+   "name": "Barbell",
+   "ja": "バーベル",
+   "size": "1m68cm",
+   "volume": 0.24870893359184265,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 168.0
+  },
+  {
+   "id": 30,
+   "name": "Barber's Pole",
+   "ja": "グルグル",
+   "size": "1m72cm5mm",
+   "volume": 0.26922619342803955,
+   "placed": 13,
+   "gain": 0.800000011920929,
+   "catchCm": 172.5
+  },
+  {
+   "id": 107,
+   "name": "Barrel",
+   "ja": "タル",
+   "size": "1m60cm8mm",
+   "volume": 0.21778416633605957,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 160.8
+  },
+  {
+   "id": 1265,
+   "name": "Bathhouse",
+   "ja": "セントウ",
+   "size": "27m85cm1mm",
+   "volume": 1131.2183837890625,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2785.1
+  },
+  {
+   "id": 1269,
+   "name": "Bathhouse Curtain",
+   "ja": "オフロノレン",
+   "size": "93cm7mm",
+   "volume": 0.043198391795158386,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 93.7
+  },
+  {
+   "id": 561,
+   "name": "Batter",
+   "ja": "バッター",
+   "size": "1m93cm4mm",
+   "volume": 0.37918993830680847,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 193.4
+  },
+  {
+   "id": 1065,
+   "name": "Beach Umbrella",
+   "ja": "ビーチパラソル",
+   "size": "5m61cm",
+   "volume": 9.249441146850586,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 561.0
+  },
+  {
+   "id": 467,
+   "name": "Beachball",
+   "ja": "ビーチボール",
+   "size": "66cm4mm",
+   "volume": 0.01536639966070652,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 66.4
+  },
+  {
+   "id": 730,
+   "name": "Bear-Man",
+   "ja": "クママン",
+   "size": "2m30cm3mm",
+   "volume": 0.640166163444519,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 230.3
+  },
+  {
+   "id": 562,
+   "name": "Benchwarmer",
+   "ja": "ベンチ",
+   "size": "1m78cm2mm",
+   "volume": 0.2963745892047882,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 178.2
+  },
+  {
+   "id": 188,
+   "name": "Bicycle",
+   "ja": "ジテンシャ",
+   "size": "1m88cm8mm",
+   "volume": 0.3526025712490082,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 188.8
+  },
+  {
+   "id": 853,
+   "name": "Biker Flag",
+   "ja": "ゾクハタ",
+   "size": "1m13cm9mm",
+   "volume": 0.07747341692447662,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 113.9
+  },
+  {
+   "id": 568,
+   "name": "Bikini Girl",
+   "ja": "ビキニオネエサン",
+   "size": "1m37cm7mm",
+   "volume": 0.13679324090480804,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 137.7
+  },
+  {
+   "id": 963,
+   "name": "Birthday Cake",
+   "ja": "バースデーケーキ",
+   "size": "79cm7mm",
+   "volume": 0.026581762358546257,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 79.7
+  },
+  {
+   "id": 492,
+   "name": "Black Sheep",
+   "ja": "クロヒツジ",
+   "size": "1m62cm1mm",
+   "volume": 0.22317072749137878,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 162.1
+  },
+  {
+   "id": 393,
+   "name": "Blowfish Ad Balloon",
+   "ja": "スーパートラフグ",
+   "size": "3m70cm4mm",
+   "volume": 2.6618032455444336,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 370.4
+  },
+  {
+   "id": 136,
+   "name": "Blue Oil Drum",
+   "ja": "アオドラムカン",
+   "size": "1m90cm6mm",
+   "volume": 0.36276015639305115,
+   "placed": 6,
+   "gain": 0.4000000059604645,
+   "catchCm": 190.6
+  },
+  {
+   "id": 170,
+   "name": "Boat",
+   "ja": "ボート",
+   "size": "2m88cm7mm",
+   "volume": 1.2599999904632568,
+   "placed": 10,
+   "gain": 0.800000011920929,
+   "catchCm": 288.7
+  },
+  {
+   "id": 689,
+   "name": "Boat Rental Sign",
+   "ja": "カシボートカンバン",
+   "size": "2m51cm5mm",
+   "volume": 0.8332799077033997,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 251.5
+  },
+  {
+   "id": 1268,
+   "name": "Boiler Room",
+   "ja": "ボイラーシツ",
+   "size": "8m12cm6mm",
+   "volume": 28.096113204956055,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 812.6
+  },
+  {
+   "id": 291,
+   "name": "Bonsai",
+   "ja": "ボンサイ",
+   "size": "1m",
+   "volume": 0.05241156369447708,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 100.0
+  },
+  {
+   "id": 1233,
+   "name": "Bonsai Display",
+   "ja": "ボンサイダナ",
+   "size": "2m87cm",
+   "volume": 1.2382997274398804,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 287.0
+  },
+  {
+   "id": 100,
+   "name": "Briefcase",
+   "ja": "アタッシュケース",
+   "size": "55cm8mm",
+   "volume": 0.009097198955714703,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 55.8
+  },
+  {
+   "id": 505,
+   "name": "Bulldog",
+   "ja": "ブルドッグ",
+   "size": "94cm3mm",
+   "volume": 0.043938443064689636,
+   "placed": 8,
+   "gain": 0.800000011920929,
+   "catchCm": 94.3
+  },
+  {
+   "id": 1176,
+   "name": "Buoy",
+   "ja": "ブイ",
+   "size": "4m44cm",
+   "volume": 4.58395528793335,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 444.0
+  },
+  {
+   "id": 595,
+   "name": "Burglar",
+   "ja": "ドロボー",
+   "size": "2m21cm3mm",
+   "volume": 0.5678964853286743,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 221.3
+  },
+  {
+   "id": 310,
+   "name": "Bus",
+   "ja": "ロセンバス",
+   "size": "12m28cm4mm",
+   "volume": 97.06121063232422,
+   "placed": 1,
+   "gain": 0.6600000262260437,
+   "catchCm": 1228.4
+  },
+  {
+   "id": 641,
+   "name": "Bus Stop",
+   "ja": "ジコクヒョウ",
+   "size": "1m52cm",
+   "volume": 0.1842290312051773,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 152.0
+  },
+  {
+   "id": 269,
+   "name": "Bus Stop",
+   "ja": "バステイ",
+   "size": "12m12cm1mm",
+   "volume": 93.25670623779297,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1212.1
+  },
+  {
+   "id": 538,
+   "name": "Businessman",
+   "ja": "ビジネスマン",
+   "size": "1m80cm9mm",
+   "volume": 0.31007474660873413,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 180.9
+  },
+  {
+   "id": 586,
+   "name": "Busker",
+   "ja": "ヒキガタリ",
+   "size": "2m23cm3mm",
+   "volume": 0.5833963751792908,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 223.3
+  },
+  {
+   "id": 542,
+   "name": "Busy Momma",
+   "ja": "ハッスルオバサン",
+   "size": "2m2mm",
+   "volume": 0.4206661581993103,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 200.2
+  },
+  {
+   "id": 682,
+   "name": "Butcher Shop",
+   "ja": "オニクヤサン",
+   "size": "13m48cm4mm",
+   "volume": 128.37686157226562,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1348.4
+  },
+  {
+   "id": 486,
+   "name": "Calf",
+   "ja": "コウシ",
+   "size": "1m24cm9mm",
+   "volume": 0.10206755995750427,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 124.9
+  },
+  {
+   "id": 1360,
+   "name": "Camp Fire",
+   "ja": "タキビ",
+   "size": "1m28cm9mm",
+   "volume": 0.1123424619436264,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 128.9
+  },
+  {
+   "id": 684,
+   "name": "Candy Store",
+   "ja": "アメヤサン",
+   "size": "13m48cm4mm",
+   "volume": 128.37686157226562,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1348.4
+  },
+  {
+   "id": 685,
+   "name": "Candy Store Sign",
+   "ja": "アメカンバン",
+   "size": "1m89cm",
+   "volume": 0.35388320684432983,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 189.0
+  },
+  {
+   "id": 9,
+   "name": "Canned Curry",
+   "ja": "カレーカン",
+   "size": "22cm9mm",
+   "volume": 0.0006340580875985324,
+   "placed": 2,
+   "gain": 0.5,
+   "catchCm": 22.9
+  },
+  {
+   "id": 1081,
+   "name": "Car Wash",
+   "ja": "センシャキ",
+   "size": "6m10cm2mm",
+   "volume": 11.899999618530273,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 610.2
+  },
+  {
+   "id": 243,
+   "name": "Carport",
+   "ja": "カーポート",
+   "size": "8m22cm6mm",
+   "volume": 29.146427154541016,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 822.6
+  },
+  {
+   "id": 520,
+   "name": "Chicken",
+   "ja": "ニワトリ",
+   "size": "89cm5mm",
+   "volume": 0.037544138729572296,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 89.5
+  },
+  {
+   "id": 558,
+   "name": "Chubby Fisherman",
+   "ja": "フトッチョツリビト",
+   "size": "1m88cm8mm",
+   "volume": 0.3527359664440155,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 188.8
+  },
+  {
+   "id": 611,
+   "name": "Clock Pedestal",
+   "ja": "チュウガクトケイダイ",
+   "size": "10m73cm9mm",
+   "volume": 64.85002136230469,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1073.9
+  },
+  {
+   "id": 380,
+   "name": "Cloud",
+   "ja": "クモ",
+   "size": "309m16cm",
+   "volume": 1547231.5,
+   "placed": 16,
+   "gain": 0.800000011920929,
+   "catchCm": 30916.2
+  },
+  {
+   "id": 148,
+   "name": "Compact",
+   "ja": "ケイジドウシャ",
+   "size": "5m40cm3mm",
+   "volume": 8.260429382324219,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 540.3
+  },
+  {
+   "id": 593,
+   "name": "Construction Guy",
+   "ja": "ゲンバマン",
+   "size": "1m79cm4mm",
+   "volume": 0.30258023738861084,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 179.4
+  },
+  {
+   "id": 731,
+   "name": "Cow-Man",
+   "ja": "ウシマン",
+   "size": "2m30cm3mm",
+   "volume": 0.639786422252655,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 230.3
+  },
+  {
+   "id": 462,
+   "name": "Cowshed",
+   "ja": "ギュウシャ",
+   "size": "15m52cm1mm",
+   "volume": 195.80931091308594,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1552.1
+  },
+  {
+   "id": 487,
+   "name": "Dairy Cow",
+   "ja": "ニュウギュウ",
+   "size": "3m19cm7mm",
+   "volume": 1.7121566534042358,
+   "placed": 16,
+   "gain": 0.800000011920929,
+   "catchCm": 319.7
+  },
+  {
+   "id": 1419,
+   "name": "Dangling Boy",
+   "ja": "ダイシャリン",
+   "size": "1m55cm5mm",
+   "volume": 0.19705170392990112,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 155.5
+  },
+  {
+   "id": 334,
+   "name": "Daruma",
+   "ja": "ダルマ",
+   "size": "86cm",
+   "volume": 0.03332873061299324,
+   "placed": 9,
+   "gain": 0.800000011920929,
+   "catchCm": 86.0
+  },
+  {
+   "id": 759,
+   "name": "Deer Scare",
+   "ja": "シシオドシ",
+   "size": "2m6cm7mm",
+   "volume": 0.46305006742477417,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 206.7
+  },
+  {
+   "id": 890,
+   "name": "Deluxe Fridge",
+   "ja": "４ダンレイゾウコ",
+   "size": "2m23cm5mm",
+   "volume": 0.5845897197723389,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 223.5
+  },
+  {
+   "id": 387,
+   "name": "Detergent",
+   "ja": "センザイ",
+   "size": "37cm2mm",
+   "volume": 0.0027000010013580322,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 37.2
+  },
+  {
+   "id": 587,
+   "name": "DIY Dad",
+   "ja": "ニチヨウダイクパパ",
+   "size": "1m78cm1mm",
+   "volume": 0.29624104499816895,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 178.1
+  },
+  {
+   "id": 38,
+   "name": "Dogfood Bowl",
+   "ja": "オワン",
+   "size": "30cm4mm",
+   "volume": 0.0014714321587234735,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 30.4
+  },
+  {
+   "id": 862,
+   "name": "Doi Residence",
+   "ja": "モリモト家",
+   "size": "14m81cm1mm",
+   "volume": 170.12966918945312,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1481.1
+  },
+  {
+   "id": 578,
+   "name": "Double Punk",
+   "ja": "ダブルヤンキー",
+   "size": "2m22cm2mm",
+   "volume": 0.5746766328811646,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 222.2
+  },
+  {
+   "id": 1392,
+   "name": "Drawbridge",
+   "ja": "シャドウ",
+   "size": "13m4cm1mm",
+   "volume": 116.13475036621094,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1304.1
+  },
+  {
+   "id": 1349,
+   "name": "Dried Kelp",
+   "ja": "ホシワカメ",
+   "size": "5m15cm7mm",
+   "volume": 7.181965351104736,
+   "placed": 10,
+   "gain": 0.800000011920929,
+   "catchCm": 515.7
+  },
+  {
+   "id": 346,
+   "name": "Drink Crate",
+   "ja": "ビールケース",
+   "size": "98cm3mm",
+   "volume": 0.049832675606012344,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 98.3
+  },
+  {
+   "id": 523,
+   "name": "Eagle",
+   "ja": "ワシ",
+   "size": "1m51cm1mm",
+   "volume": 0.18063123524188995,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 151.1
+  },
+  {
+   "id": 512,
+   "name": "Elephant",
+   "ja": "ゾウ",
+   "size": "9m13cm4mm",
+   "volume": 39.904335021972656,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 913.4
+  },
+  {
+   "id": 273,
+   "name": "Falling Rock",
+   "ja": "ラクセキ",
+   "size": "4m41cm4mm",
+   "volume": 4.5034708976745605,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 441.4
+  },
+  {
+   "id": 556,
+   "name": "Farmer",
+   "ja": "ノウミン",
+   "size": "2m5cm9mm",
+   "volume": 0.4575640857219696,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 205.9
+  },
+  {
+   "id": 536,
+   "name": "Fat Schoolboy",
+   "ja": "フトッチョクン",
+   "size": "1m85cm",
+   "volume": 0.3315817713737488,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 185.0
+  },
+  {
+   "id": 222,
+   "name": "Firewood",
+   "ja": "マキ",
+   "size": "79cm8mm",
+   "volume": 0.02666334994137287,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 79.8
+  },
+  {
+   "id": 557,
+   "name": "Fisherman",
+   "ja": "ツリビト",
+   "size": "1m66cm6mm",
+   "volume": 0.24239875376224518,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 166.6
+  },
+  {
+   "id": 164,
+   "name": "Fishing Pole",
+   "ja": "ツリザオ",
+   "size": "66cm5mm",
+   "volume": 0.015406523831188679,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 66.5
+  },
+  {
+   "id": 1096,
+   "name": "Flag Buoy",
+   "ja": "プカプカハタ",
+   "size": "2m54cm6mm",
+   "volume": 0.8643850684165955,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 254.6
+  },
+  {
+   "id": 1241,
+   "name": "Flagstick",
+   "ja": "ゴルフハタ",
+   "size": "64cm6mm",
+   "volume": 0.01417724322527647,
+   "placed": 1,
+   "gain": 0.3499999940395355,
+   "catchCm": 64.6
+  },
+  {
+   "id": 798,
+   "name": "Florist Fence",
+   "ja": "ハナヤサク",
+   "size": "1m90cm3mm",
+   "volume": 0.36139076948165894,
+   "placed": 6,
+   "gain": 0.4000000059604645,
+   "catchCm": 190.3
+  },
+  {
+   "id": 234,
+   "name": "Flower Bed",
+   "ja": "カダン",
+   "size": "3m38cm1mm",
+   "volume": 2.024066925048828,
+   "placed": 11,
+   "gain": 0.800000011920929,
+   "catchCm": 338.1
+  },
+  {
+   "id": 1124,
+   "name": "Flower Clock \"12\"",
+   "ja": "12",
+   "size": "1m17cm9mm",
+   "volume": 0.08596915006637573,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 117.9
+  },
+  {
+   "id": 1125,
+   "name": "Flower Clock \"3\"",
+   "ja": "3",
+   "size": "93cm4mm",
+   "volume": 0.042760949581861496,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 93.4
+  },
+  {
+   "id": 1126,
+   "name": "Flower Clock \"6\"",
+   "ja": "6",
+   "size": "92cm",
+   "volume": 0.04081054776906967,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 92.0
+  },
+  {
+   "id": 1127,
+   "name": "Flower Clock \"9\"",
+   "ja": "9",
+   "size": "92cm",
+   "volume": 0.04081054776906967,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 92.0
+  },
+  {
+   "id": 1412,
+   "name": "Flower Girl",
+   "ja": "バイト",
+   "size": "1m62cm7mm",
+   "volume": 0.22586216032505035,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 162.7
+  },
+  {
+   "id": 1171,
+   "name": "Forest Guidepost",
+   "ja": "ミチシルベ",
+   "size": "2m40cm4mm",
+   "volume": 0.7279999852180481,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 240.4
+  },
+  {
+   "id": 754,
+   "name": "Froggy Car",
+   "ja": "カエルカー",
+   "size": "1m43cm3mm",
+   "volume": 0.15428408980369568,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 143.3
+  },
+  {
+   "id": 323,
+   "name": "Garbage",
+   "ja": "ゴミ",
+   "size": "1m26cm1mm",
+   "volume": 0.10499998182058334,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 126.1
+  },
+  {
+   "id": 216,
+   "name": "Garden Lantern",
+   "ja": "トウロウ",
+   "size": "1m26cm6mm",
+   "volume": 0.1064000055193901,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 126.6
+  },
+  {
+   "id": 1144,
+   "name": "Garden Plant",
+   "ja": "ミニウエキ",
+   "size": "1m8cm",
+   "volume": 0.06608838587999344,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 108.0
+  },
+  {
+   "id": 760,
+   "name": "Garden Rock",
+   "ja": "ニワイシ",
+   "size": "81cm4mm",
+   "volume": 0.028342586010694504,
+   "placed": 10,
+   "gain": 0.800000011920929,
+   "catchCm": 81.4
+  },
+  {
+   "id": 278,
+   "name": "Gardening Fence",
+   "ja": "サク",
+   "size": "2m96cm3mm",
+   "volume": 1.3623985052108765,
+   "placed": 3,
+   "gain": 0.20000000298023224,
+   "catchCm": 296.3
+  },
+  {
+   "id": 1080,
+   "name": "Gas Pump",
+   "ja": "キュウユキ",
+   "size": "2m16cm1mm",
+   "volume": 0.528784990310669,
+   "placed": 8,
+   "gain": 0.800000011920929,
+   "catchCm": 216.1
+  },
+  {
+   "id": 1079,
+   "name": "Gas Station",
+   "ja": "ガソリンスタンド",
+   "size": "21m9cm1mm",
+   "volume": 491.26019287109375,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 2109.1
+  },
+  {
+   "id": 1082,
+   "name": "Gas Station Sign",
+   "ja": "ガソリンカンバン",
+   "size": "5m50cm5mm",
+   "volume": 8.73599910736084,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 550.5
+  },
+  {
+   "id": 1431,
+   "name": "Giant Octopus",
+   "ja": "ジャンボダコ",
+   "size": "50m",
+   "volume": 6545.13720703125,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 5000.0
+  },
+  {
+   "id": 431,
+   "name": "Giant Watermelon",
+   "ja": "キョダイスイカ",
+   "size": "4m76cm2mm",
+   "volume": 5.65440034866333,
+   "placed": 23,
+   "gain": 0.800000011920929,
+   "catchCm": 476.2
+  },
+  {
+   "id": 603,
+   "name": "Gigantic Tree",
+   "ja": "ジャイアントキョボク",
+   "size": "38m54cm3mm",
+   "volume": 2998.26904296875,
+   "placed": 1,
+   "gain": 0.4000000059604645,
+   "catchCm": 3854.4
+  },
+  {
+   "id": 549,
+   "name": "Girl",
+   "ja": "オンナノコ",
+   "size": "1m37cm5mm",
+   "volume": 0.13611868023872375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 137.5
+  },
+  {
+   "id": 318,
+   "name": "Globe Jungle Gym",
+   "ja": "グローブジャングル",
+   "size": "5m55cm1mm",
+   "volume": 8.959999084472656,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 555.1
+  },
+  {
+   "id": 528,
+   "name": "Golf Nut",
+   "ja": "ゴルフズキ",
+   "size": "1m66cm6mm",
+   "volume": 0.24211889505386353,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 166.6
+  },
+  {
+   "id": 1425,
+   "name": "Golfer Guy",
+   "ja": "ゴルフオヤジ",
+   "size": "1m66cm6mm",
+   "volume": 0.24218016862869263,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 166.6
+  },
+  {
+   "id": 1401,
+   "name": "Great x2 Grandpa",
+   "ja": "ヒイヒイジイサン",
+   "size": "1m57cm1mm",
+   "volume": 0.20337143540382385,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 157.1
+  },
+  {
+   "id": 1455,
+   "name": "Green Balloon",
+   "ja": "ミドフウセン",
+   "size": "89cm7mm",
+   "volume": 0.037802550941705704,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 89.7
+  },
+  {
+   "id": 135,
+   "name": "Green Oil Drum",
+   "ja": "ミドドラムカン",
+   "size": "1m90cm6mm",
+   "volume": 0.36276015639305115,
+   "placed": 6,
+   "gain": 0.4000000059604645,
+   "catchCm": 190.6
+  },
+  {
+   "id": 735,
+   "name": "Guardrail (5m)",
+   "ja": "ガードレール",
+   "size": "2m51cm5mm",
+   "volume": 0.8336815237998962,
+   "placed": 15,
+   "gain": 0.800000011920929,
+   "catchCm": 251.5
+  },
+  {
+   "id": 737,
+   "name": "Guardrail (Left)",
+   "ja": "ガードレール",
+   "size": "2m23cm",
+   "volume": 0.5807045102119446,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 223.0
+  },
+  {
+   "id": 736,
+   "name": "Guardrail (Right)",
+   "ja": "ガードレール",
+   "size": "2m23cm",
+   "volume": 0.5807045102119446,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 223.0
+  },
+  {
+   "id": 1348,
+   "name": "Gull 'n Kelp",
+   "ja": "カモメワカメ",
+   "size": "10m38cm5mm",
+   "volume": 58.648902893066406,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1038.5
+  },
+  {
+   "id": 1280,
+   "name": "Gymnasium",
+   "ja": "タイイクカン",
+   "size": "47m45cm9mm",
+   "volume": 5597.0947265625,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 4745.9
+  },
+  {
+   "id": 838,
+   "name": "Ham",
+   "ja": "ハム",
+   "size": "34cm",
+   "volume": 0.0020606499165296555,
+   "placed": 19,
+   "gain": 0.800000011920929,
+   "catchCm": 34.0
+  },
+  {
+   "id": 677,
+   "name": "Hanging Bars",
+   "ja": "ウンテイ",
+   "size": "6m36cm",
+   "volume": 13.475030899047852,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 636.0
+  },
+  {
+   "id": 1397,
+   "name": "Hara Residence",
+   "ja": "ハラ家",
+   "size": "16m30cm8mm",
+   "volume": 227.1221466064453,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1630.8
+  },
+  {
+   "id": 146,
+   "name": "Hatchback",
+   "ja": "ハッチバック",
+   "size": "5m79cm9mm",
+   "volume": 10.212808609008789,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 579.9
+  },
+  {
+   "id": 1123,
+   "name": "Hour Hand",
+   "ja": "タンシン",
+   "size": "1m30cm3mm",
+   "volume": 0.11593014001846313,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 130.3
+  },
+  {
+   "id": 1318,
+   "name": "Huge Falling Rock",
+   "ja": "ダイラクセキ",
+   "size": "9m94cm2mm",
+   "volume": 51.468238830566406,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 994.2
+  },
+  {
+   "id": 602,
+   "name": "Huge Tree",
+   "ja": "キョボク",
+   "size": "18m64cm",
+   "volume": 339.1141357421875,
+   "placed": 59,
+   "gain": 0.4000000059604645,
+   "catchCm": 1864.0
+  },
+  {
+   "id": 567,
+   "name": "Human Tower",
+   "ja": "ビックリカタグルマ",
+   "size": "4m17cm1mm",
+   "volume": 3.8002736568450928,
+   "placed": 5,
+   "gain": 0.25,
+   "catchCm": 417.1
+  },
+  {
+   "id": 637,
+   "name": "Ice-Cream Freezer",
+   "ja": "オミセレイゾウコ",
+   "size": "2m45cm5mm",
+   "volume": 0.7751493453979492,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 245.5
+  },
+  {
+   "id": 34,
+   "name": "Iron",
+   "ja": "アイロン",
+   "size": "43cm8mm",
+   "volume": 0.004417564254254103,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 43.8
+  },
+  {
+   "id": 145,
+   "name": "Japanese Car",
+   "ja": "コクサンシャ",
+   "size": "6m3cm",
+   "volume": 11.484186172485352,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 603.0
+  },
+  {
+   "id": 575,
+   "name": "Judo Contest",
+   "ja": "ジュウドウタイケツ",
+   "size": "2m60cm",
+   "volume": 0.9205762147903442,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 260.0
+  },
+  {
+   "id": 1418,
+   "name": "Judo Wrestler",
+   "ja": "ジュウドウカ",
+   "size": "2m10cm3mm",
+   "volume": 0.4870827794075012,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 210.3
+  },
+  {
+   "id": 1015,
+   "name": "Jumbo Umbrella",
+   "ja": "ジャンボカサ",
+   "size": "2m87cm8mm",
+   "volume": 1.248287320137024,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 287.8
+  },
+  {
+   "id": 320,
+   "name": "Jungle Gym",
+   "ja": "ジャングルジム",
+   "size": "7m33cm1mm",
+   "volume": 20.63188934326172,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 733.1
+  },
+  {
+   "id": 614,
+   "name": "Kelp Factory",
+   "ja": "ワカメコウジョウ",
+   "size": "34m60cm9mm",
+   "volume": 2170.7177734375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 3461.0
+  },
+  {
+   "id": 196,
+   "name": "Kerosene Tank",
+   "ja": "トウユタンク",
+   "size": "79cm5mm",
+   "volume": 0.026333574205636978,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 79.5
+  },
+  {
+   "id": 912,
+   "name": "Kettle",
+   "ja": "ヤカン",
+   "size": "72cm9mm",
+   "volume": 0.02032402530312538,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 72.9
+  },
+  {
+   "id": 306,
+   "name": "Kid's Boot",
+   "ja": "コドモナガグツ",
+   "size": "40cm7mm",
+   "volume": 0.0035514524206519127,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 40.7
+  },
+  {
+   "id": 1032,
+   "name": "Killer Move",
+   "ja": "ジゴクグルマ",
+   "size": "2m60cm",
+   "volume": 0.9211004972457886,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 260.0
+  },
+  {
+   "id": 707,
+   "name": "Kimono",
+   "ja": "キモノ",
+   "size": "2m48cm3mm",
+   "volume": 0.8022709488868713,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 248.3
+  },
+  {
+   "id": 1243,
+   "name": "Ladder",
+   "ja": "ハシゴ",
+   "size": "1m96cm4mm",
+   "volume": 0.39715632796287537,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 196.4
+  },
+  {
+   "id": 241,
+   "name": "Lamp Post",
+   "ja": "ガイトウ",
+   "size": "2m8cm9mm",
+   "volume": 0.4778924286365509,
+   "placed": 8,
+   "gain": 0.800000011920929,
+   "catchCm": 208.9
+  },
+  {
+   "id": 1196,
+   "name": "Laundry Deck",
+   "ja": "モノホシダイ",
+   "size": "1m50cm",
+   "volume": 0.17682935297489166,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 150.0
+  },
+  {
+   "id": 1197,
+   "name": "Laundry Pole",
+   "ja": "モノホシザオ",
+   "size": "1m30cm",
+   "volume": 0.1150694489479065,
+   "placed": 4,
+   "gain": 0.05000000074505806,
+   "catchCm": 130.0
+  },
+  {
+   "id": 149,
+   "name": "Light Truck",
+   "ja": "ケイトラ",
+   "size": "5m44cm5mm",
+   "volume": 8.453941345214844,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 544.5
+  },
+  {
+   "id": 1264,
+   "name": "Lighthouse",
+   "ja": "トウダイ",
+   "size": "18m18cm1mm",
+   "volume": 314.7139587402344,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1818.1
+  },
+  {
+   "id": 450,
+   "name": "Lion Fountain",
+   "ja": "フンスイライオン",
+   "size": "9m8cm9mm",
+   "volume": 39.32612228393555,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 908.9
+  },
+  {
+   "id": 451,
+   "name": "Lion Paw",
+   "ja": "ライオンハンド",
+   "size": "2m58cm",
+   "volume": 0.8996570706367493,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 258.0
+  },
+  {
+   "id": 1111,
+   "name": "Log",
+   "ja": "マルタ",
+   "size": "1m32cm4mm",
+   "volume": 0.12171348184347153,
+   "placed": 32,
+   "gain": 0.800000011920929,
+   "catchCm": 132.4
+  },
+  {
+   "id": 1112,
+   "name": "Log Cabin",
+   "ja": "マルタゴヤ",
+   "size": "8m65cm3mm",
+   "volume": 33.92703628540039,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 865.3
+  },
+  {
+   "id": 463,
+   "name": "Log Fence",
+   "ja": "マルタサク",
+   "size": "3m49cm7mm",
+   "volume": 2.239898920059204,
+   "placed": 24,
+   "gain": 0.800000011920929,
+   "catchCm": 349.7
+  },
+  {
+   "id": 687,
+   "name": "Lollipop",
+   "ja": "キャンディ",
+   "size": "18cm5mm",
+   "volume": 0.00033393758349120617,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 18.5
+  },
+  {
+   "id": 285,
+   "name": "Lotus Leaf",
+   "ja": "ハスハッパ",
+   "size": "1m21cm",
+   "volume": 0.09292120486497879,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 121.0
+  },
+  {
+   "id": 1304,
+   "name": "Lucky Cat",
+   "ja": "マネキネコ",
+   "size": "68cm8mm",
+   "volume": 0.017108621075749397,
+   "placed": 2,
+   "gain": 0.4000000059604645,
+   "catchCm": 68.8
+  },
+  {
+   "id": 238,
+   "name": "Mailbox",
+   "ja": "ポスト",
+   "size": "1m44cm4mm",
+   "volume": 0.1578499972820282,
+   "placed": 2,
+   "gain": 0.7200000286102295,
+   "catchCm": 144.4
+  },
+  {
+   "id": 1395,
+   "name": "Majima Residence",
+   "ja": "マジマ家",
+   "size": "16m30cm8mm",
+   "volume": 227.1221466064453,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1630.8
+  },
+  {
+   "id": 496,
+   "name": "Man",
+   "ja": "マン",
+   "size": "1m65cm4mm",
+   "volume": 0.23717208206653595,
+   "placed": 12,
+   "gain": 0.800000011920929,
+   "catchCm": 165.4
+  },
+  {
+   "id": 797,
+   "name": "Manhole Cover",
+   "ja": "マンホール",
+   "size": "59cm",
+   "volume": 0.010799999348819256,
+   "placed": 4,
+   "gain": 0.4000000059604645,
+   "catchCm": 59.0
+  },
+  {
+   "id": 329,
+   "name": "Manneken Pis",
+   "ja": "ショウベンコゾウ",
+   "size": "1m45cm8mm",
+   "volume": 0.16247306764125824,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 145.8
+  },
+  {
+   "id": 620,
+   "name": "Marlin Building",
+   "ja": "イワナビル",
+   "size": "23m8cm8mm",
+   "volume": 644.4073486328125,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2308.8
+  },
+  {
+   "id": 608,
+   "name": "Matsuo Residence",
+   "ja": "マツオ家",
+   "size": "15m83cm6mm",
+   "volume": 207.95584106445312,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1583.6
+  },
+  {
+   "id": 207,
+   "name": "Matsuri Tent",
+   "ja": "カセツテント",
+   "size": "8m29cm2mm",
+   "volume": 29.8560848236084,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 829.2
+  },
+  {
+   "id": 1432,
+   "name": "Merman",
+   "ja": "ニンギョマン",
+   "size": "2m11cm5mm",
+   "volume": 0.4953914284706116,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 211.5
+  },
+  {
+   "id": 183,
+   "name": "Metal Bucket",
+   "ja": "ブリキバケツ",
+   "size": "1m26cm2mm",
+   "volume": 0.1053967997431755,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 126.2
+  },
+  {
+   "id": 610,
+   "name": "Middle School",
+   "ja": "チュウガッコウ",
+   "size": "51m20cm7mm",
+   "volume": 7030.7880859375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 5120.7
+  },
+  {
+   "id": 1122,
+   "name": "Minute Hand",
+   "ja": "チョウシン",
+   "size": "1m33cm7mm",
+   "volume": 0.12535744905471802,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 133.7
+  },
+  {
+   "id": 1011,
+   "name": "Momotaro",
+   "ja": "モモタロウ",
+   "size": "1m5mm",
+   "volume": 0.05318361893296242,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 100.5
+  },
+  {
+   "id": 418,
+   "name": "Monster Truck",
+   "ja": "モンスタートラック",
+   "size": "8m37cm3mm",
+   "volume": 30.74195671081543,
+   "placed": 2,
+   "gain": 0.6600000262260437,
+   "catchCm": 837.3
+  },
+  {
+   "id": 1150,
+   "name": "Monument",
+   "ja": "キネンヒ",
+   "size": "3m84cm8mm",
+   "volume": 2.9841723442077637,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 384.8
+  },
+  {
+   "id": 1253,
+   "name": "Morning Glory",
+   "ja": "アサガオ",
+   "size": "93cm",
+   "volume": 0.0421307273209095,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 93.0
+  },
+  {
+   "id": 172,
+   "name": "Mortar",
+   "ja": "ウス",
+   "size": "93cm6mm",
+   "volume": 0.043019089847803116,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 93.6
+  },
+  {
+   "id": 723,
+   "name": "Mushroom (L)",
+   "ja": "キノコ",
+   "size": "11m62cm",
+   "volume": 82.16590881347656,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1162.0
+  },
+  {
+   "id": 1375,
+   "name": "New Hotel Building",
+   "ja": "ホテルシンカン",
+   "size": "32m44cm8mm",
+   "volume": 1788.9742431640625,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 3244.9
+  },
+  {
+   "id": 1378,
+   "name": "New Hotel Sign",
+   "ja": "シンカンカンバン",
+   "size": "7m76cm8mm",
+   "volume": 24.547086715698242,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 776.8
+  },
+  {
+   "id": 604,
+   "name": "Nikaido Residence",
+   "ja": "ニカイドウ家",
+   "size": "14m81cm1mm",
+   "volume": 170.12966918945312,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1481.1
+  },
+  {
+   "id": 887,
+   "name": "Noguchi Residence",
+   "ja": "ノグチ家",
+   "size": "15m83cm6mm",
+   "volume": 207.95584106445312,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1583.6
+  },
+  {
+   "id": 600,
+   "name": "Nurse",
+   "ja": "ナース",
+   "size": "1m57cm1mm",
+   "volume": 0.20308563113212585,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 157.1
+  },
+  {
+   "id": 1043,
+   "name": "Old Salt",
+   "ja": "ウミノオトコ",
+   "size": "1m79cm1mm",
+   "volume": 0.30091533064842224,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 179.1
+  },
+  {
+   "id": 559,
+   "name": "Outfielder",
+   "ja": "ヤシュ",
+   "size": "1m84cm",
+   "volume": 0.32668256759643555,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 184.0
+  },
+  {
+   "id": 489,
+   "name": "Ox",
+   "ja": "ヤギュウ",
+   "size": "5m49cm1mm",
+   "volume": 8.672933578491211,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 549.1
+  },
+  {
+   "id": 261,
+   "name": "Palm Tree",
+   "ja": "ヤシ",
+   "size": "6m44cm4mm",
+   "volume": 14.016843795776367,
+   "placed": 45,
+   "gain": 0.800000011920929,
+   "catchCm": 644.4
+  },
+  {
+   "id": 852,
+   "name": "Panda Balloon",
+   "ja": "パンダバルーン",
+   "size": "16m77cm2mm",
+   "volume": 247.06088256835938,
+   "placed": 2,
+   "gain": 0.5,
+   "catchCm": 1677.2
+  },
+  {
+   "id": 495,
+   "name": "Panda Ride",
+   "ja": "パンダカー",
+   "size": "2m99cm1mm",
+   "volume": 1.4011447429656982,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 299.1
+  },
+  {
+   "id": 1209,
+   "name": "Panda Sign",
+   "ja": "パンダカンバン",
+   "size": "6m58cm4mm",
+   "volume": 14.945001602172852,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 658.4
+  },
+  {
+   "id": 239,
+   "name": "Pansies",
+   "ja": "パンジー",
+   "size": "65cm2mm",
+   "volume": 0.014515197835862637,
+   "placed": 4,
+   "gain": 0.4000000059604645,
+   "catchCm": 65.2
+  },
+  {
+   "id": 1130,
+   "name": "Park Entrance",
+   "ja": "パークイリグチ",
+   "size": "8m44cm9mm",
+   "volume": 31.58185386657715,
+   "placed": 1,
+   "gain": 0.6600000262260437,
+   "catchCm": 844.9
+  },
+  {
+   "id": 1170,
+   "name": "Park Fence",
+   "ja": "パークサク",
+   "size": "1m34cm",
+   "volume": 0.12599998712539673,
+   "placed": 9,
+   "gain": 0.800000011920929,
+   "catchCm": 134.0
+  },
+  {
+   "id": 755,
+   "name": "Park Lamp Post",
+   "ja": "コウエンガイトウ",
+   "size": "3m15cm6mm",
+   "volume": 1.6464000940322876,
+   "placed": 20,
+   "gain": 0.800000011920929,
+   "catchCm": 315.6
+  },
+  {
+   "id": 1357,
+   "name": "Park Map",
+   "ja": "パークマップ",
+   "size": "2m32cm2mm",
+   "volume": 0.656138002872467,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 232.2
+  },
+  {
+   "id": 702,
+   "name": "Parking Garage",
+   "ja": "パーキング",
+   "size": "24m44cm6mm",
+   "volume": 765.0208740234375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2444.6
+  },
+  {
+   "id": 1365,
+   "name": "Parking Lot",
+   "ja": "チュウシャジョウ",
+   "size": "3m66cm2mm",
+   "volume": 2.5727522373199463,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 366.2
+  },
+  {
+   "id": 279,
+   "name": "Parking Lot Sign",
+   "ja": "パーキングカンバン",
+   "size": "7m31cm6mm",
+   "volume": 20.510759353637695,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 731.6
+  },
+  {
+   "id": 1373,
+   "name": "Parking Turntable",
+   "ja": "ターンテーブル",
+   "size": "8m64cm9mm",
+   "volume": 33.88212203979492,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 864.9
+  },
+  {
+   "id": 180,
+   "name": "Pay Phone",
+   "ja": "コウシュウデンワ",
+   "size": "1m45cm",
+   "volume": 0.15974581241607666,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 145.0
+  },
+  {
+   "id": 930,
+   "name": "Pedestrian Signal",
+   "ja": "ホコウシャシンゴウ",
+   "size": "2m72cm2mm",
+   "volume": 1.0564448833465576,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 272.2
+  },
+  {
+   "id": 1030,
+   "name": "Penguin",
+   "ja": "ペンギン",
+   "size": "1m26cm1mm",
+   "volume": 0.10512624680995941,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 126.1
+  },
+  {
+   "id": 249,
+   "name": "Phone Booth",
+   "ja": "デンワボックス",
+   "size": "3m33cm",
+   "volume": 1.9339754581451416,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 333.0
+  },
+  {
+   "id": 917,
+   "name": "Photo Booth",
+   "ja": "マチカドシャシンキ",
+   "size": "3m45cm9mm",
+   "volume": 2.1671998500823975,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 345.9
+  },
+  {
+   "id": 213,
+   "name": "Pickle Tub",
+   "ja": "ツケモノ",
+   "size": "1m8cm9mm",
+   "volume": 0.06770820915699005,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 108.9
+  },
+  {
+   "id": 187,
+   "name": "Pier",
+   "ja": "サンバシ",
+   "size": "16m70cm2mm",
+   "volume": 243.9732666015625,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1670.2
+  },
+  {
+   "id": 519,
+   "name": "Pigeon",
+   "ja": "ハト",
+   "size": "35cm7mm",
+   "volume": 0.002382951555773616,
+   "placed": 2,
+   "gain": 0.5,
+   "catchCm": 35.7
+  },
+  {
+   "id": 795,
+   "name": "Pineapple",
+   "ja": "パイナップル",
+   "size": "65cm",
+   "volume": 0.014386964030563831,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 65.0
+  },
+  {
+   "id": 1456,
+   "name": "Pink Balloon",
+   "ja": "モモフウセン",
+   "size": "89cm7mm",
+   "volume": 0.037802550941705704,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 89.7
+  },
+  {
+   "id": 560,
+   "name": "Pitcher",
+   "ja": "ピッチャー",
+   "size": "1m98cm7mm",
+   "volume": 0.41133806109428406,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 198.7
+  },
+  {
+   "id": 342,
+   "name": "Pizza Delivery Bike",
+   "ja": "ピザバイク",
+   "size": "3m36cm4mm",
+   "volume": 1.994712233543396,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 336.4
+  },
+  {
+   "id": 1219,
+   "name": "Planting Fence",
+   "ja": "ミニサク",
+   "size": "44cm6mm",
+   "volume": 0.004651285242289305,
+   "placed": 9,
+   "gain": 0.800000011920929,
+   "catchCm": 44.6
+  },
+  {
+   "id": 317,
+   "name": "Plastic Bench",
+   "ja": "ベンチ",
+   "size": "1m79cm1mm",
+   "volume": 0.30086442828178406,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 179.1
+  },
+  {
+   "id": 205,
+   "name": "Plastic Greenhouse",
+   "ja": "ビニールハウス",
+   "size": "13m8cm4mm",
+   "volume": 117.28357696533203,
+   "placed": 1,
+   "gain": 0.6000000238418579,
+   "catchCm": 1308.4
+  },
+  {
+   "id": 577,
+   "name": "Playful Punk",
+   "ja": "ハコノリヤンキー",
+   "size": "1m55cm5mm",
+   "volume": 0.19696646928787231,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 155.5
+  },
+  {
+   "id": 289,
+   "name": "Policeman",
+   "ja": "オマワリサン",
+   "size": "1m82cm8mm",
+   "volume": 0.3203490078449249,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 182.8
+  },
+  {
+   "id": 177,
+   "name": "Pool Ring",
+   "ja": "ウキワ",
+   "size": "89cm",
+   "volume": 0.03691231831908226,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 89.0
+  },
+  {
+   "id": 794,
+   "name": "Pool Ring",
+   "ja": "ウキワ",
+   "size": "89cm",
+   "volume": 0.03691231831908226,
+   "placed": 12,
+   "gain": 0.800000011920929,
+   "catchCm": 89.0
+  },
+  {
+   "id": 548,
+   "name": "Precious",
+   "ja": "オジョウチャン",
+   "size": "1m2cm1mm",
+   "volume": 0.055798839777708054,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 102.1
+  },
+  {
+   "id": 242,
+   "name": "Prefab House",
+   "ja": "プレハブ",
+   "size": "11m56cm9mm",
+   "volume": 81.08020782470703,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1156.9
+  },
+  {
+   "id": 679,
+   "name": "Principal's Statue",
+   "ja": "コウチョウ像",
+   "size": "1m99cm2mm",
+   "volume": 0.414180189371109,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 199.2
+  },
+  {
+   "id": 171,
+   "name": "Propane Tank",
+   "ja": "ガスボンベ",
+   "size": "1m52cm7mm",
+   "volume": 0.1867147535085678,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 152.7
+  },
+  {
+   "id": 576,
+   "name": "Punk",
+   "ja": "ヤンキー",
+   "size": "1m55cm5mm",
+   "volume": 0.1969568431377411,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 155.5
+  },
+  {
+   "id": 1342,
+   "name": "Pylon",
+   "ja": "クイ",
+   "size": "71cm3mm",
+   "volume": 0.019003529101610184,
+   "placed": 15,
+   "gain": 0.800000011920929,
+   "catchCm": 71.3
+  },
+  {
+   "id": 729,
+   "name": "Rabbit-Man",
+   "ja": "ウサギマン",
+   "size": "2m30cm3mm",
+   "volume": 0.6400409936904907,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 230.3
+  },
+  {
+   "id": 166,
+   "name": "Radio Tower",
+   "ja": "デンパトウ",
+   "size": "18m24cm7mm",
+   "volume": 318.1240234375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1824.7
+  },
+  {
+   "id": 946,
+   "name": "Ramen",
+   "ja": "ラーメン",
+   "size": "46cm5mm",
+   "volume": 0.005286297295242548,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 46.5
+  },
+  {
+   "id": 1400,
+   "name": "RC Boy",
+   "ja": "ラジオコントロールクン",
+   "size": "1m11cm1mm",
+   "volume": 0.0719476267695427,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 111.1
+  },
+  {
+   "id": 1281,
+   "name": "Red Ball",
+   "ja": "アカダマ",
+   "size": "3m99cm9mm",
+   "volume": 3.3498575687408447,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 399.9
+  },
+  {
+   "id": 134,
+   "name": "Red Oil Drum",
+   "ja": "アカドラムカン",
+   "size": "1m90cm6mm",
+   "volume": 0.36276015639305115,
+   "placed": 4,
+   "gain": 0.4000000059604645,
+   "catchCm": 190.6
+  },
+  {
+   "id": 276,
+   "name": "Regular Tree",
+   "ja": "ジュモク",
+   "size": "9m48cm3mm",
+   "volume": 44.660858154296875,
+   "placed": 78,
+   "gain": 0.4000000059604645,
+   "catchCm": 948.3
+  },
+  {
+   "id": 1041,
+   "name": "Relaxing Dude",
+   "ja": "クツロギマン",
+   "size": "1m66cm",
+   "volume": 0.2397872358560562,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 166.0
+  },
+  {
+   "id": 913,
+   "name": "Rich Haul Flag #2",
+   "ja": "タイリョウハタ",
+   "size": "5m93cm7mm",
+   "volume": 10.959465980529785,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 593.7
+  },
+  {
+   "id": 914,
+   "name": "Rich Haul Flag #4",
+   "ja": "ウミノサチ",
+   "size": "7m12cm3mm",
+   "volume": 18.92765998840332,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 712.3
+  },
+  {
+   "id": 686,
+   "name": "Roast On Bone",
+   "ja": "ホネツキニク",
+   "size": "50cm",
+   "volume": 0.006577654276043177,
+   "placed": 12,
+   "gain": 0.800000011920929,
+   "catchCm": 50.0
+  },
+  {
+   "id": 678,
+   "name": "Rocking Horse",
+   "ja": "バネウマ",
+   "size": "1m56cm",
+   "volume": 0.19879814982414246,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 156.0
+  },
+  {
+   "id": 305,
+   "name": "Rubber Boot",
+   "ja": "ゴムナガ",
+   "size": "58cm6mm",
+   "volume": 0.010582027956843376,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 58.6
+  },
+  {
+   "id": 616,
+   "name": "Ryokan",
+   "ja": "リョカン",
+   "size": "42m44cm6mm",
+   "volume": 4004.24365234375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 4244.6
+  },
+  {
+   "id": 617,
+   "name": "Ryokan Sign",
+   "ja": "ミ",
+   "size": "6m1cm4mm",
+   "volume": 11.391388893127441,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 601.4
+  },
+  {
+   "id": 1366,
+   "name": "Ryokan Sign",
+   "ja": "チ",
+   "size": "6m1cm4mm",
+   "volume": 11.391388893127441,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 601.4
+  },
+  {
+   "id": 1369,
+   "name": "Ryokan Sign",
+   "ja": "リョ",
+   "size": "6m1cm4mm",
+   "volume": 11.391388893127441,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 601.4
+  },
+  {
+   "id": 1370,
+   "name": "Ryokan Sign",
+   "ja": "カン",
+   "size": "6m1cm4mm",
+   "volume": 11.391388893127441,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 601.4
+  },
+  {
+   "id": 158,
+   "name": "Sailboat Rental",
+   "ja": "カシボートテン",
+   "size": "13m46cm1mm",
+   "volume": 127.72545623779297,
+   "placed": 1,
+   "gain": 0.6600000262260437,
+   "catchCm": 1346.1
+  },
+  {
+   "id": 607,
+   "name": "Saito Residence",
+   "ja": "ウメモト家",
+   "size": "15m89cm8mm",
+   "volume": 210.41806030273438,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1589.8
+  },
+  {
+   "id": 103,
+   "name": "Scarecrow",
+   "ja": "カカシ",
+   "size": "2m46cm2mm",
+   "volume": 0.7813898921012878,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 246.2
+  },
+  {
+   "id": 1119,
+   "name": "Scattered Clouds",
+   "ja": "チギレグモ",
+   "size": "6m44cm7mm",
+   "volume": 14.035418510437012,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 644.7
+  },
+  {
+   "id": 704,
+   "name": "School Clocktower",
+   "ja": "ショウガクトケイダイ",
+   "size": "19m5cm3mm",
+   "volume": 362.2015075683594,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1905.3
+  },
+  {
+   "id": 1350,
+   "name": "School Gate",
+   "ja": "コウモン",
+   "size": "6m64cm2mm",
+   "volume": 15.348057746887207,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 664.2
+  },
+  {
+   "id": 1277,
+   "name": "School Sign (Ga)",
+   "ja": "ガッ",
+   "size": "2m44cm9mm",
+   "volume": 0.7696921825408936,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 244.9
+  },
+  {
+   "id": 1278,
+   "name": "School Sign (Ko)",
+   "ja": "コウ",
+   "size": "2m44cm9mm",
+   "volume": 0.7696921825408936,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 244.9
+  },
+  {
+   "id": 1273,
+   "name": "School Sign (Ni)",
+   "ja": "ニ",
+   "size": "2m44cm9mm",
+   "volume": 0.7696921825408936,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 244.9
+  },
+  {
+   "id": 1272,
+   "name": "School Sign (U)",
+   "ja": "ウ",
+   "size": "2m44cm9mm",
+   "volume": 0.7696921825408936,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 244.9
+  },
+  {
+   "id": 1173,
+   "name": "Sea Anemone",
+   "ja": "イソギンチャク",
+   "size": "55cm6mm",
+   "volume": 0.009041071869432926,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 55.6
+  },
+  {
+   "id": 514,
+   "name": "Sea Otter",
+   "ja": "ラッコ",
+   "size": "1m12cm2mm",
+   "volume": 0.07408621162176132,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 112.2
+  },
+  {
+   "id": 739,
+   "name": "Sea Turtle",
+   "ja": "ウミガメ",
+   "size": "2m73cm6mm",
+   "volume": 1.0726410150527954,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 273.6
+  },
+  {
+   "id": 325,
+   "name": "Seat Cushion",
+   "ja": "ザブトン",
+   "size": "69cm3mm",
+   "volume": 0.017499998211860657,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 69.3
+  },
+  {
+   "id": 1239,
+   "name": "Shoji",
+   "ja": "ショウジ",
+   "size": "1m31cm",
+   "volume": 0.11778576672077179,
+   "placed": 12,
+   "gain": 0.25999999046325684,
+   "catchCm": 131.0
+  },
+  {
+   "id": 99,
+   "name": "Shopping Cart",
+   "ja": "カイモノカート",
+   "size": "1m45cm6mm",
+   "volume": 0.16191650927066803,
+   "placed": 5,
+   "gain": 0.6000000238418579,
+   "catchCm": 145.6
+  },
+  {
+   "id": 218,
+   "name": "Shovel",
+   "ja": "ショベル",
+   "size": "85cm",
+   "volume": 0.032176196575164795,
+   "placed": 1,
+   "gain": 0.35600000619888306,
+   "catchCm": 85.0
+  },
+  {
+   "id": 508,
+   "name": "Siamese Cat",
+   "ja": "シャムネコ",
+   "size": "71cm9mm",
+   "volume": 0.019485585391521454,
+   "placed": 1,
+   "gain": 0.5,
+   "catchCm": 71.9
+  },
+  {
+   "id": 373,
+   "name": "Sidewalk Marker",
+   "ja": "ホドウクイ",
+   "size": "1m41cm1mm",
+   "volume": 0.14731353521347046,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 141.1
+  },
+  {
+   "id": 1134,
+   "name": "Silo",
+   "ja": "サイロ",
+   "size": "22m48cm2mm",
+   "volume": 595.0394897460938,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 2248.2
+  },
+  {
+   "id": 552,
+   "name": "Skinny",
+   "ja": "セイタカマン",
+   "size": "1m65cm8mm",
+   "volume": 0.23897632956504822,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 165.8
+  },
+  {
+   "id": 321,
+   "name": "Slide",
+   "ja": "スベリダイ",
+   "size": "6m58cm3mm",
+   "volume": 14.942439079284668,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 658.3
+  },
+  {
+   "id": 1237,
+   "name": "Sliding Door",
+   "ja": "フスマ",
+   "size": "1m53cm9mm",
+   "volume": 0.1909414529800415,
+   "placed": 7,
+   "gain": 0.25999999046325684,
+   "catchCm": 153.9
+  },
+  {
+   "id": 1236,
+   "name": "Sliding Door",
+   "ja": "フスマ",
+   "size": "1m59cm4mm",
+   "volume": 0.2121572196483612,
+   "placed": 15,
+   "gain": 0.25999999046325684,
+   "catchCm": 159.4
+  },
+  {
+   "id": 648,
+   "name": "Small Fishing Boat",
+   "ja": "ミニギョセン",
+   "size": "11m47cm2mm",
+   "volume": 79.05933380126953,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1147.2
+  },
+  {
+   "id": 1266,
+   "name": "Smokestack",
+   "ja": "オフロエントツ",
+   "size": "14m69cm3mm",
+   "volume": 166.1185302734375,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 1469.3
+  },
+  {
+   "id": 615,
+   "name": "Smokestack",
+   "ja": "コウジョウエントツ",
+   "size": "22m80cm6mm",
+   "volume": 621.1159057617188,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2280.6
+  },
+  {
+   "id": 353,
+   "name": "Snowman",
+   "ja": "ユキダルマ",
+   "size": "1m45cm8mm",
+   "volume": 0.1623387634754181,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 145.8
+  },
+  {
+   "id": 452,
+   "name": "Soccer Goal",
+   "ja": "サッカーゴール",
+   "size": "8m55cm6mm",
+   "volume": 32.80127716064453,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 855.6
+  },
+  {
+   "id": 1078,
+   "name": "Spirit of Fun",
+   "ja": "タノシミ",
+   "size": "3m56cm3mm",
+   "volume": 2.3696210384368896,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 356.3
+  },
+  {
+   "id": 235,
+   "name": "Squared Shrubbery",
+   "ja": "シカクウエコミ",
+   "size": "2m24cm3mm",
+   "volume": 0.5913482308387756,
+   "placed": 13,
+   "gain": 0.4000000059604645,
+   "catchCm": 224.3
+  },
+  {
+   "id": 1424,
+   "name": "Stilts",
+   "ja": "タケウマ",
+   "size": "1m61cm4mm",
+   "volume": 0.22032959759235382,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 161.4
+  },
+  {
+   "id": 621,
+   "name": "Stingray Building",
+   "ja": "クマノミビル",
+   "size": "29m85cm",
+   "volume": 1392.69091796875,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2985.0
+  },
+  {
+   "id": 554,
+   "name": "Storekeeper",
+   "ja": "アキンド",
+   "size": "1m78cm1mm",
+   "volume": 0.2962722182273865,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 178.1
+  },
+  {
+   "id": 293,
+   "name": "Street Stall",
+   "ja": "デミセ",
+   "size": "5m99cm5mm",
+   "volume": 11.287064552307129,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 599.5
+  },
+  {
+   "id": 1404,
+   "name": "Summer Skinny",
+   "ja": "サマーセイタカサン",
+   "size": "1m54cm1mm",
+   "volume": 0.19173431396484375,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 154.1
+  },
+  {
+   "id": 574,
+   "name": "Sumo Bout",
+   "ja": "スモウタイケツ",
+   "size": "4m4cm",
+   "volume": 3.4530935287475586,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 404.0
+  },
+  {
+   "id": 1417,
+   "name": "Sumo Wrestler",
+   "ja": "スモウレスラー",
+   "size": "3m1mm",
+   "volume": 1.415829062461853,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 300.1
+  },
+  {
+   "id": 709,
+   "name": "Sunflower",
+   "ja": "ヒマワリ",
+   "size": "1m20cm",
+   "volume": 0.09052902460098267,
+   "placed": 17,
+   "gain": 0.800000011920929,
+   "catchCm": 120.0
+  },
+  {
+   "id": 612,
+   "name": "Supermarket",
+   "ja": "スーパーマーケット",
+   "size": "24m17cm1mm",
+   "volume": 739.4861450195312,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2417.1
+  },
+  {
+   "id": 613,
+   "name": "Supermarket Sign",
+   "ja": "スーパーカンバン",
+   "size": "13m13cm6mm",
+   "volume": 118.70552825927734,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1313.6
+  },
+  {
+   "id": 324,
+   "name": "Surfboard",
+   "ja": "サーフボード",
+   "size": "1m38cm5mm",
+   "volume": 0.13912494480609894,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 138.5
+  },
+  {
+   "id": 569,
+   "name": "Swimsuit Girl",
+   "ja": "ミズギオネエサン",
+   "size": "1m40cm1mm",
+   "volume": 0.14426419138908386,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 140.1
+  },
+  {
+   "id": 1429,
+   "name": "Swordfish",
+   "ja": "カジキマグロ",
+   "size": "14m23cm",
+   "volume": 150.88235473632812,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1423.0
+  },
+  {
+   "id": 507,
+   "name": "Tabby Cat",
+   "ja": "トラネコ",
+   "size": "64cm2mm",
+   "volume": 0.013918275013566017,
+   "placed": 1,
+   "gain": 0.5,
+   "catchCm": 64.2
+  },
+  {
+   "id": 355,
+   "name": "Taiko Drum",
+   "ja": "ワダイコ",
+   "size": "2m40cm5mm",
+   "volume": 0.7286826968193054,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 240.5
+  },
+  {
+   "id": 534,
+   "name": "Tall Schoolboy",
+   "ja": "セイタカクン",
+   "size": "1m75cm3mm",
+   "volume": 0.2824784517288208,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 175.3
+  },
+  {
+   "id": 1271,
+   "name": "Tall Totem Pole",
+   "ja": "ロングトーテムポール",
+   "size": "14m25cm5mm",
+   "volume": 151.68577575683594,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 1425.5
+  },
+  {
+   "id": 458,
+   "name": "Telephone",
+   "ja": "デンワ",
+   "size": "52cm8mm",
+   "volume": 0.007740661967545748,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 52.8
+  },
+  {
+   "id": 255,
+   "name": "Telephone Pole",
+   "ja": "デンチュウ",
+   "size": "6m41cm1mm",
+   "volume": 13.798263549804688,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 641.1
+  },
+  {
+   "id": 720,
+   "name": "Thermos Pot",
+   "ja": "ポット",
+   "size": "51cm1mm",
+   "volume": 0.007020827382802963,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 51.1
+  },
+  {
+   "id": 952,
+   "name": "Tire",
+   "ja": "タイヤ",
+   "size": "1m14cm9mm",
+   "volume": 0.07951813191175461,
+   "placed": 9,
+   "gain": 0.800000011920929,
+   "catchCm": 114.9
+  },
+  {
+   "id": 1270,
+   "name": "Totem Pole",
+   "ja": "トーテムポール",
+   "size": "9m26cm7mm",
+   "volume": 41.67250442504883,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 926.7
+  },
+  {
+   "id": 564,
+   "name": "Towel Guy",
+   "ja": "ハダカ",
+   "size": "1m67cm3mm",
+   "volume": 0.24524016678333282,
+   "placed": 11,
+   "gain": 0.800000011920929,
+   "catchCm": 167.3
+  },
+  {
+   "id": 800,
+   "name": "Toy Dispenser",
+   "ja": "ガチャガチャ",
+   "size": "1m9cm4mm",
+   "volume": 0.06856457889080048,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 109.4
+  },
+  {
+   "id": 153,
+   "name": "Tractor",
+   "ja": "トラクター",
+   "size": "6m14cm5mm",
+   "volume": 12.155560493469238,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 614.5
+  },
+  {
+   "id": 647,
+   "name": "Traffic Mirror",
+   "ja": "ミラー",
+   "size": "2m29cm6mm",
+   "volume": 0.6339235305786133,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 229.6
+  },
+  {
+   "id": 929,
+   "name": "Traffic Signal",
+   "ja": "シンゴウキ",
+   "size": "6m34cm1mm",
+   "volume": 13.350749015808105,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 634.1
+  },
+  {
+   "id": 181,
+   "name": "Trash Can",
+   "ja": "ゴミカゴ",
+   "size": "1m30cm2mm",
+   "volume": 0.11569944769144058,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 130.2
+  },
+  {
+   "id": 650,
+   "name": "Trawler",
+   "ja": "ダイギョセン",
+   "size": "28m48cm1mm",
+   "volume": 1209.7371826171875,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 2848.1
+  },
+  {
+   "id": 1097,
+   "name": "Treasure Chest",
+   "ja": "オタカラ",
+   "size": "2m2cm1mm",
+   "volume": 0.4322147071361542,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 202.1
+  },
+  {
+   "id": 339,
+   "name": "Trophy",
+   "ja": "トロフィー",
+   "size": "60cm9mm",
+   "volume": 0.011871562339365482,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 60.9
+  },
+  {
+   "id": 309,
+   "name": "Truck",
+   "ja": "トラック",
+   "size": "10m10cm6mm",
+   "volume": 65.5941390991211,
+   "placed": 1,
+   "gain": 0.6600000262260437,
+   "catchCm": 1078.0
+  },
+  {
+   "id": 475,
+   "name": "Tuna",
+   "ja": "マグロ",
+   "size": "1m67cm8mm",
+   "volume": 0.24766919016838074,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 167.8
+  },
+  {
+   "id": 984,
+   "name": "TV Camera",
+   "ja": "テレビカメラ",
+   "size": "2m77cm5mm",
+   "volume": 1.119301676750183,
+   "placed": 3,
+   "gain": 0.800000011920929,
+   "catchCm": 277.5
+  },
+  {
+   "id": 1129,
+   "name": "TV Station",
+   "ja": "テレビキョク",
+   "size": "43m43cm5mm",
+   "volume": 4290.76220703125,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 4343.5
+  },
+  {
+   "id": 1012,
+   "name": "Umbrella",
+   "ja": "アマガサ",
+   "size": "1m35cm3mm",
+   "volume": 0.12986798584461212,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 135.3
+  },
+  {
+   "id": 147,
+   "name": "Van",
+   "ja": "ワンボックス",
+   "size": "6m83cm6mm",
+   "volume": 16.73212432861328,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 683.6
+  },
+  {
+   "id": 662,
+   "name": "Vegetable Carton",
+   "ja": "ヤサイダンボール",
+   "size": "1m80cm",
+   "volume": 0.30542662739753723,
+   "placed": 5,
+   "gain": 0.800000011920929,
+   "catchCm": 180.0
+  },
+  {
+   "id": 644,
+   "name": "Vending Machine",
+   "ja": "アカジハンキ",
+   "size": "2m72cm1mm",
+   "volume": 1.055168867111206,
+   "placed": 9,
+   "gain": 0.800000011920929,
+   "catchCm": 272.1
+  },
+  {
+   "id": 645,
+   "name": "Vending Machine",
+   "ja": "アオジハンキ",
+   "size": "2m72cm1mm",
+   "volume": 1.055168867111206,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 272.1
+  },
+  {
+   "id": 229,
+   "name": "Wall (Long)",
+   "ja": "ヘイ",
+   "size": "7m81cm1mm",
+   "volume": 24.959997177124023,
+   "placed": 16,
+   "gain": 0.07999999821186066,
+   "catchCm": 781.1
+  },
+  {
+   "id": 227,
+   "name": "Wall (Short)",
+   "ja": "カベ",
+   "size": "5m46cm9mm",
+   "volume": 8.569598197937012,
+   "placed": 2,
+   "gain": 0.07999999821186066,
+   "catchCm": 546.9
+  },
+  {
+   "id": 1193,
+   "name": "Washing Machine",
+   "ja": "センタクキ",
+   "size": "2m35cm7mm",
+   "volume": 0.6864125728607178,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 235.7
+  },
+  {
+   "id": 333,
+   "name": "Water Tap",
+   "ja": "スイドウ",
+   "size": "1m24cm4mm",
+   "volume": 0.1010260134935379,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 124.4
+  },
+  {
+   "id": 728,
+   "name": "Watermelon Boy",
+   "ja": "スイカワリ",
+   "size": "1m30cm",
+   "volume": 0.11524491757154465,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 130.0
+  },
+  {
+   "id": 133,
+   "name": "Weather Station",
+   "ja": "ヒャクヨウバコ",
+   "size": "3m62cm6mm",
+   "volume": 2.4973955154418945,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 362.6
+  },
+  {
+   "id": 967,
+   "name": "Wedding Cake",
+   "ja": "ウェディングケーキ",
+   "size": "1m81cm",
+   "volume": 0.31073153018951416,
+   "placed": 6,
+   "gain": 0.800000011920929,
+   "catchCm": 181.0
+  },
+  {
+   "id": 27,
+   "name": "Welcome Mat",
+   "ja": "オミセマット",
+   "size": "55cm1mm",
+   "volume": 0.008799998089671135,
+   "placed": 4,
+   "gain": 0.800000011920929,
+   "catchCm": 55.1
+  },
+  {
+   "id": 214,
+   "name": "Wheelbarrow",
+   "ja": "テオシグルマ",
+   "size": "2m26cm4mm",
+   "volume": 0.6077322959899902,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 226.4
+  },
+  {
+   "id": 491,
+   "name": "White Sheep",
+   "ja": "シロヒツジ",
+   "size": "1m67cm1mm",
+   "volume": 0.24442674219608307,
+   "placed": 8,
+   "gain": 0.800000011920929,
+   "catchCm": 167.1
+  },
+  {
+   "id": 1267,
+   "name": "White Wall",
+   "ja": "シラカベ",
+   "size": "2m90cm",
+   "volume": 1.277449607849121,
+   "placed": 19,
+   "gain": 0.800000011920929,
+   "catchCm": 290.0
+  },
+  {
+   "id": 710,
+   "name": "Windmill",
+   "ja": "フウシャ",
+   "size": "45m45cm4mm",
+   "volume": 4917.337890625,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 4545.4
+  },
+  {
+   "id": 916,
+   "name": "Wooden Bench",
+   "ja": "エンダイ",
+   "size": "1m84cm",
+   "volume": 0.3265085220336914,
+   "placed": 1,
+   "gain": 0.800000011920929,
+   "catchCm": 184.0
+  },
+  {
+   "id": 29,
+   "name": "Wooden Bench",
+   "ja": "モクセイベンチ",
+   "size": "1m92cm1mm",
+   "volume": 0.3715367019176483,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 192.1
+  },
+  {
+   "id": 244,
+   "name": "Wooden Box",
+   "ja": "キバコ",
+   "size": "97cm8mm",
+   "volume": 0.04899999499320984,
+   "placed": 7,
+   "gain": 0.800000011920929,
+   "catchCm": 97.8
+  },
+  {
+   "id": 204,
+   "name": "Yellow Squash",
+   "ja": "キカボチャ",
+   "size": "57cm4mm",
+   "volume": 0.009912778623402119,
+   "placed": 2,
+   "gain": 0.800000011920929,
+   "catchCm": 57.4
+  }
+ ]
+}

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-DpC6+xYEXooBpFM0vOvN8K59PmYn6QRsYWvEIlYXKyY='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>North Star 10m Helper</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: one narrow search column; sticky search bar, result cards keyed by the big pause-screen count. */
+:root {
+  --display: "Mochiy Pop One", "M PLUS Rounded 1c", system-ui, sans-serif;
+  --body: "M PLUS Rounded 1c", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #f6f4ee; --panel: #fffdf7; --ink: #1d1b2e; --muted: #6b6880; --line: #e3dfd2;
+  --accent: #d6336c; --accent-ink: #fff; --star: #e0a800; --bad: #b4492e; --hl: #fff1a8; --chip: #ece7f6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0e1a; --panel: #19172a; --ink: #f1eefc; --muted: #9c98b8; --line: #2c2944;
+    --accent: #ff5c93; --accent-ink: #14111f; --star: #ffd23f; --bad: #ff8a65; --hl: #4a3f00; --chip: #2c2944;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f0e1a; --panel: #19172a; --ink: #f1eefc; --muted: #9c98b8; --line: #2c2944;
+  --accent: #ff5c93; --accent-ink: #14111f; --star: #ffd23f; --bad: #ff8a65; --hl: #4a3f00; --chip: #2c2944;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 var(--body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 760px; margin: 0 auto; padding-block: 20px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1 { font: 400 1.5rem/1.2 var(--display); margin: 0 0 4px; text-wrap: balance; }
+h1 .star { color: var(--star); }
+.sub a { color: var(--accent); }
+.sub { color: var(--muted); margin: 0 0 16px; font-size: .9rem; }
+.controls { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg);
+  padding: 8px 0 10px; display: flex; gap: 10px; flex-wrap: wrap; align-items: end; }
+.search { flex: 1 1 260px; }
+label { display: block; font-size: .75rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3px; }
+input { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 12px; width: 100%; }
+input:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+#q { font-size: 1.1rem; }
+.target { display: flex; gap: 4px; align-items: center; }
+.target input { width: 4.6em; text-align: right; padding: 10px 6px; font-variant-numeric: tabular-nums; }
+.target span { color: var(--muted); font-size: .9rem; }
+.meta { color: var(--muted); font-size: .82rem; margin: 2px 0 8px; }
+ul { list-style: none; margin: 0; padding: 0; }
+li.obj { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.name { font-weight: 600; font-size: 1.05rem; }
+.name mark { background: var(--hl); color: inherit; border-radius: 3px; }
+.ja { color: var(--muted); font-weight: 400; font-size: .85rem; margin-left: 6px; }
+.count { font-size: 1.6rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent); white-space: nowrap; }
+.count small { font-size: .8rem; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.count.na { font-size: 1rem; color: var(--bad); font-weight: 600; }
+.details { color: var(--muted); font-size: .84rem; margin-top: 4px; display: flex; gap: 6px 16px; flex-wrap: wrap; }
+.details b { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.rev { margin-top: 8px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .88rem; }
+.rev input { width: 9em; padding: 6px 8px; font-variant-numeric: tabular-nums; }
+.rev output { font-variant-numeric: tabular-nums; }
+.rev output.good { color: var(--accent); font-weight: 650; }
+.empty { color: var(--muted); padding: 24px 4px; text-align: center; }
+.gap { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 12px; margin: 18px 0 0;
+  scroll-margin-top: 120px;
+  display: grid; gap: 10px; }
+.gap h2 { font: 400 1.05rem/1.2 var(--display); margin: 0; }
+.gap h2 .star { color: var(--star); }
+.gap p { margin: 0; color: var(--muted); font-size: .88rem; max-width: 62ch; }
+.gap-row { display: flex; gap: 10px 16px; align-items: end; flex-wrap: wrap; }
+.status { font-size: .9rem; font-weight: 700; padding: 5px 10px; border-radius: 999px; background: var(--chip); color: var(--ink); }
+.status.done { background: var(--accent); color: var(--accent-ink); }
+.status.over { background: var(--bad); color: var(--accent-ink); }
+#gapList { display: grid; gap: 6px; }
+#gapList li button { all: unset; box-sizing: border-box; width: 100%; cursor: pointer; display: grid; grid-template-columns: 5.2em 1fr auto;
+  gap: 4px 12px; align-items: baseline; padding: 7px 10px; border-radius: 9px; border: 1px solid var(--line); }
+#gapList li button:hover { border-color: var(--accent); }
+#gapList li button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.pick-n { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent); font-size: 1.05rem; }
+.pick-name { font-weight: 600; }
+.pick-meta { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; text-align: right; }
+.pick-odds { grid-column: 2 / -1; color: var(--muted); font-size: .8rem; margin-top: -2px; }
+.use { font: inherit; font-size: .82rem; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 8px; padding: 4px 9px; cursor: pointer; }
+.use:hover { border-color: var(--accent); }
+@media (max-width: 480px) { #gapList li button { grid-template-columns: 4.4em 1fr; } .pick-meta { grid-column: 2; text-align: left; } }
+details.help { margin-top: 24px; color: var(--muted); font-size: .88rem; }
+details.help summary { cursor: pointer; color: var(--ink); }
+details.help p { margin: 8px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1><span class="star">★</span> North Star 10m Helper</h1>
+  <p class="sub">Katamari Damacy REROLL · type the object named on the pause screen to see how many of them make your katamari's target size. Close to 10m? <a href="#gap">Close the gap</a> suggests what to roll up next.</p>
+
+  <div class="controls">
+    <div class="search">
+      <label for="q">Object on pause screen</label>
+      <input id="q" type="search" placeholder="e.g. Lollipop, Ramen, Tabby Cat…" autocomplete="off" autofocus>
+    </div>
+    <div>
+      <label>Target size</label>
+      <div class="target">
+        <input id="tm" type="number" min="0" max="99" step="1" value="10" aria-label="metres"><span>m</span>
+        <input id="tc" type="number" min="0" max="99" step="1" value="0" aria-label="centimetres"><span>cm</span>
+        <input id="tmm" type="number" min="0" max="9" step="1" value="0" aria-label="millimetres"><span>mm</span>
+      </div>
+    </div>
+  </div>
+  <div class="meta" id="meta"></div>
+  <ul id="list"></ul>
+
+  <section class="gap" id="gap" aria-labelledby="gapTitle">
+    <h2 id="gapTitle"><span class="star">★</span> Close the gap</h2>
+    <p>Enter the size on your HUD, or press <b>Use this size</b> under a pause count. These pickups take you to the target centimetre, which the King scores as a perfect 10m.</p>
+    <div class="gap-row">
+      <div>
+        <label>Your size now</label>
+        <div class="target">
+          <input id="cm_m" type="number" min="0" max="99" step="1" value="9" aria-label="current metres"><span>m</span>
+          <input id="cm_c" type="number" min="0" max="99" step="1" value="96" aria-label="current centimetres"><span>cm</span>
+          <input id="cm_mm" type="number" min="0" max="9" step="1" value="4" aria-label="current millimetres"><span>mm</span>
+        </div>
+      </div>
+      <span class="status" id="gapStatus"></span>
+    </div>
+    <p id="gapNote"></p>
+    <ul id="gapList"></ul>
+  </section>
+
+  <details class="help">
+    <summary>How the numbers are calculated</summary>
+    <p>On pause, the game picks a random object that is still in the level and is smaller than your katamari, and shows
+      <i>katamari volume ÷ object volume</i>, rounded. Object volumes come from the game's own simulation code, and katamari
+      volume is worked out from the size on the HUD (<code>diameter = 2·(100·∛(3V/4π) + 0.01)</code> cm).</p>
+    <p><b>Count</b> is what the pause screen should show when the HUD reads exactly the target size.
+      <b>While HUD shows</b> gives the range of counts you can see while the HUD reads the target metres and centimetres (any mm).
+      <b>Per object</b> is how much your diameter grows for each +1 in the count, so smaller objects give a more exact reading.</p>
+    <p>Type the count you see into <b>I see</b> to work out your current size. Objects within 2% of your katamari's volume
+      show as "1", and anything bigger can't be picked.</p>
+    <p><b>Close the gap</b> uses the pickup rule from the game's code. Each object adds part of its volume to the katamari,
+      usually 80%, and North Star scales that down as you grow (×0.8 at 10m). A suggestion is marked sure when every size your
+      HUD reading could mean still ends between 10m 00cm 0mm and 10m 00cm 9mm. It only lists objects your katamari is big enough to roll up.</p>
+    <p>Only objects that are placed in the North Star stage are listed (320 kinds); the game never picks anything else here.</p>
+  </details>
+</div>
+
+<script>
+const RAW = /*DATA*/[["\"All You Can Eat\"","クイホウダイノボリ","2m8cm5mm",0.4747498035430908,5,0.800000011920929,208.5],["\"Don't Rush Out!\"","コウツウコゾウ","1m43cm5mm",0.1548359990119934,2,0.800000011920929,143.5],["\"No Parking\" Sign","チュウシャキンシ","1m17cm9mm",0.08593166619539261,1,0.6000000238418579,117.9],["\"On Sale\" Banner","ノボリ","2m19cm5mm",0.5538747310638428,2,0.800000011920929,219.5],["Abalone Diver","アマサン","1m64cm4mm",0.23298344016075134,3,0.800000011920929,164.4],["Advertising Balloon","アドバルーン","11m35cm2mm",76.61001586914062,2,0.800000011920929,1135.2],["Apartment Building","マンション","31m71cm4mm",1670.151611328125,1,0.800000011920929,3171.4],["Arcade Machine","キョウタイ","2m75cm5mm",1.0950106382369995,1,0.800000011920929,275.5],["Balloon Man","フウセンオジサン","2m34cm",0.6713839769363403,3,0.800000011920929,234.0],["Balloon Shop","フーセンヤ","13m48cm4mm",128.37686157226562,1,0.800000011920929,1348.4],["Balloon Shop Sign","フーセンカンバン","2m51cm4mm",0.8326011300086975,2,0.800000011920929,251.4],["Bamboo Fence","タケガキ","96cm9mm",0.04775046557188034,19,0.800000011920929,96.9],["Banana Bunch","フサバナナ","40cm6mm",0.0035170395858585835,6,0.800000011920929,40.6],["Barbell","バーベル","1m68cm",0.24870893359184265,3,0.800000011920929,168.0],["Barber's Pole","グルグル","1m72cm5mm",0.26922619342803955,13,0.800000011920929,172.5],["Barrel","タル","1m60cm8mm",0.21778416633605957,1,0.800000011920929,160.8],["Bathhouse","セントウ","27m85cm1mm",1131.2183837890625,1,0.800000011920929,2785.1],["Bathhouse Curtain","オフロノレン","93cm7mm",0.043198391795158386,1,0.800000011920929,93.7],["Batter","バッター","1m93cm4mm",0.37918993830680847,3,0.800000011920929,193.4],["Beach Umbrella","ビーチパラソル","5m61cm",9.249441146850586,6,0.800000011920929,561.0],["Beachball","ビーチボール","66cm4mm",0.01536639966070652,7,0.800000011920929,66.4],["Bear-Man","クママン","2m30cm3mm",0.640166163444519,4,0.800000011920929,230.3],["Benchwarmer","ベンチ","1m78cm2mm",0.2963745892047882,3,0.800000011920929,178.2],["Bicycle","ジテンシャ","1m88cm8mm",0.3526025712490082,1,0.800000011920929,188.8],["Biker Flag","ゾクハタ","1m13cm9mm",0.07747341692447662,1,0.800000011920929,113.9],["Bikini Girl","ビキニオネエサン","1m37cm7mm",0.13679324090480804,3,0.800000011920929,137.7],["Birthday Cake","バースデーケーキ","79cm7mm",0.026581762358546257,7,0.800000011920929,79.7],["Black Sheep","クロヒツジ","1m62cm1mm",0.22317072749137878,5,0.800000011920929,162.1],["Blowfish Ad Balloon","スーパートラフグ","3m70cm4mm",2.6618032455444336,1,0.800000011920929,370.4],["Blue Oil Drum","アオドラムカン","1m90cm6mm",0.36276015639305115,6,0.4000000059604645,190.6],["Boat","ボート","2m88cm7mm",1.2599999904632568,10,0.800000011920929,288.7],["Boat Rental Sign","カシボートカンバン","2m51cm5mm",0.8332799077033997,1,0.800000011920929,251.5],["Boiler Room","ボイラーシツ","8m12cm6mm",28.096113204956055,2,0.800000011920929,812.6],["Bonsai","ボンサイ","1m",0.05241156369447708,1,0.800000011920929,100.0],["Bonsai Display","ボンサイダナ","2m87cm",1.2382997274398804,7,0.800000011920929,287.0],["Briefcase","アタッシュケース","55cm8mm",0.009097198955714703,2,0.800000011920929,55.8],["Bulldog","ブルドッグ","94cm3mm",0.043938443064689636,8,0.800000011920929,94.3],["Buoy","ブイ","4m44cm",4.58395528793335,4,0.800000011920929,444.0],["Burglar","ドロボー","2m21cm3mm",0.5678964853286743,1,0.800000011920929,221.3],["Bus","ロセンバス","12m28cm4mm",97.06121063232422,1,0.6600000262260437,1228.4],["Bus Stop","ジコクヒョウ","1m52cm",0.1842290312051773,2,0.800000011920929,152.0],["Bus Stop","バステイ","12m12cm1mm",93.25670623779297,2,0.800000011920929,1212.1],["Businessman","ビジネスマン","1m80cm9mm",0.31007474660873413,2,0.800000011920929,180.9],["Busker","ヒキガタリ","2m23cm3mm",0.5833963751792908,3,0.800000011920929,223.3],["Busy Momma","ハッスルオバサン","2m2mm",0.4206661581993103,5,0.800000011920929,200.2],["Butcher Shop","オニクヤサン","13m48cm4mm",128.37686157226562,1,0.800000011920929,1348.4],["Calf","コウシ","1m24cm9mm",0.10206755995750427,1,0.800000011920929,124.9],["Camp Fire","タキビ","1m28cm9mm",0.1123424619436264,6,0.800000011920929,128.9],["Candy Store","アメヤサン","13m48cm4mm",128.37686157226562,1,0.800000011920929,1348.4],["Candy Store Sign","アメカンバン","1m89cm",0.35388320684432983,1,0.800000011920929,189.0],["Canned Curry","カレーカン","22cm9mm",0.0006340580875985324,2,0.5,22.9],["Car Wash","センシャキ","6m10cm2mm",11.899999618530273,2,0.800000011920929,610.2],["Carport","カーポート","8m22cm6mm",29.146427154541016,3,0.800000011920929,822.6],["Chicken","ニワトリ","89cm5mm",0.037544138729572296,6,0.800000011920929,89.5],["Chubby Fisherman","フトッチョツリビト","1m88cm8mm",0.3527359664440155,2,0.800000011920929,188.8],["Clock Pedestal","チュウガクトケイダイ","10m73cm9mm",64.85002136230469,1,0.800000011920929,1073.9],["Cloud","クモ","309m16cm",1547231.5,16,0.800000011920929,30916.2],["Compact","ケイジドウシャ","5m40cm3mm",8.260429382324219,4,0.800000011920929,540.3],["Construction Guy","ゲンバマン","1m79cm4mm",0.30258023738861084,1,0.800000011920929,179.4],["Cow-Man","ウシマン","2m30cm3mm",0.639786422252655,2,0.800000011920929,230.3],["Cowshed","ギュウシャ","15m52cm1mm",195.80931091308594,2,0.800000011920929,1552.1],["Dairy Cow","ニュウギュウ","3m19cm7mm",1.7121566534042358,16,0.800000011920929,319.7],["Dangling Boy","ダイシャリン","1m55cm5mm",0.19705170392990112,2,0.800000011920929,155.5],["Daruma","ダルマ","86cm",0.03332873061299324,9,0.800000011920929,86.0],["Deer Scare","シシオドシ","2m6cm7mm",0.46305006742477417,1,0.800000011920929,206.7],["Deluxe Fridge","４ダンレイゾウコ","2m23cm5mm",0.5845897197723389,2,0.800000011920929,223.5],["Detergent","センザイ","37cm2mm",0.0027000010013580322,1,0.800000011920929,37.2],["DIY Dad","ニチヨウダイクパパ","1m78cm1mm",0.29624104499816895,1,0.800000011920929,178.1],["Dogfood Bowl","オワン","30cm4mm",0.0014714321587234735,4,0.800000011920929,30.4],["Doi Residence","モリモト家","14m81cm1mm",170.12966918945312,1,0.800000011920929,1481.1],["Double Punk","ダブルヤンキー","2m22cm2mm",0.5746766328811646,1,0.800000011920929,222.2],["Drawbridge","シャドウ","13m4cm1mm",116.13475036621094,1,0.800000011920929,1304.1],["Dried Kelp","ホシワカメ","5m15cm7mm",7.181965351104736,10,0.800000011920929,515.7],["Drink Crate","ビールケース","98cm3mm",0.049832675606012344,2,0.800000011920929,98.3],["Eagle","ワシ","1m51cm1mm",0.18063123524188995,1,0.800000011920929,151.1],["Elephant","ゾウ","9m13cm4mm",39.904335021972656,1,0.800000011920929,913.4],["Falling Rock","ラクセキ","4m41cm4mm",4.5034708976745605,4,0.800000011920929,441.4],["Farmer","ノウミン","2m5cm9mm",0.4575640857219696,1,0.800000011920929,205.9],["Fat Schoolboy","フトッチョクン","1m85cm",0.3315817713737488,2,0.800000011920929,185.0],["Firewood","マキ","79cm8mm",0.02666334994137287,1,0.800000011920929,79.8],["Fisherman","ツリビト","1m66cm6mm",0.24239875376224518,2,0.800000011920929,166.6],["Fishing Pole","ツリザオ","66cm5mm",0.015406523831188679,1,0.800000011920929,66.5],["Flag Buoy","プカプカハタ","2m54cm6mm",0.8643850684165955,6,0.800000011920929,254.6],["Flagstick","ゴルフハタ","64cm6mm",0.01417724322527647,1,0.3499999940395355,64.6],["Florist Fence","ハナヤサク","1m90cm3mm",0.36139076948165894,6,0.4000000059604645,190.3],["Flower Bed","カダン","3m38cm1mm",2.024066925048828,11,0.800000011920929,338.1],["Flower Clock \"12\"","12","1m17cm9mm",0.08596915006637573,1,0.800000011920929,117.9],["Flower Clock \"3\"","3","93cm4mm",0.042760949581861496,1,0.800000011920929,93.4],["Flower Clock \"6\"","6","92cm",0.04081054776906967,1,0.800000011920929,92.0],["Flower Clock \"9\"","9","92cm",0.04081054776906967,1,0.800000011920929,92.0],["Flower Girl","バイト","1m62cm7mm",0.22586216032505035,4,0.800000011920929,162.7],["Forest Guidepost","ミチシルベ","2m40cm4mm",0.7279999852180481,1,0.800000011920929,240.4],["Froggy Car","カエルカー","1m43cm3mm",0.15428408980369568,1,0.800000011920929,143.3],["Garbage","ゴミ","1m26cm1mm",0.10499998182058334,1,0.800000011920929,126.1],["Garden Lantern","トウロウ","1m26cm6mm",0.1064000055193901,3,0.800000011920929,126.6],["Garden Plant","ミニウエキ","1m8cm",0.06608838587999344,4,0.800000011920929,108.0],["Garden Rock","ニワイシ","81cm4mm",0.028342586010694504,10,0.800000011920929,81.4],["Gardening Fence","サク","2m96cm3mm",1.3623985052108765,3,0.20000000298023224,296.3],["Gas Pump","キュウユキ","2m16cm1mm",0.528784990310669,8,0.800000011920929,216.1],["Gas Station","ガソリンスタンド","21m9cm1mm",491.26019287109375,2,0.800000011920929,2109.1],["Gas Station Sign","ガソリンカンバン","5m50cm5mm",8.73599910736084,2,0.800000011920929,550.5],["Giant Octopus","ジャンボダコ","50m",6545.13720703125,2,0.800000011920929,5000.0],["Giant Watermelon","キョダイスイカ","4m76cm2mm",5.65440034866333,23,0.800000011920929,476.2],["Gigantic Tree","ジャイアントキョボク","38m54cm3mm",2998.26904296875,1,0.4000000059604645,3854.4],["Girl","オンナノコ","1m37cm5mm",0.13611868023872375,1,0.800000011920929,137.5],["Globe Jungle Gym","グローブジャングル","5m55cm1mm",8.959999084472656,1,0.800000011920929,555.1],["Golf Nut","ゴルフズキ","1m66cm6mm",0.24211889505386353,1,0.800000011920929,166.6],["Golfer Guy","ゴルフオヤジ","1m66cm6mm",0.24218016862869263,1,0.800000011920929,166.6],["Great x2 Grandpa","ヒイヒイジイサン","1m57cm1mm",0.20337143540382385,1,0.800000011920929,157.1],["Green Balloon","ミドフウセン","89cm7mm",0.037802550941705704,1,0.800000011920929,89.7],["Green Oil Drum","ミドドラムカン","1m90cm6mm",0.36276015639305115,6,0.4000000059604645,190.6],["Guardrail (5m)","ガードレール","2m51cm5mm",0.8336815237998962,15,0.800000011920929,251.5],["Guardrail (Left)","ガードレール","2m23cm",0.5807045102119446,3,0.800000011920929,223.0],["Guardrail (Right)","ガードレール","2m23cm",0.5807045102119446,2,0.800000011920929,223.0],["Gull 'n Kelp","カモメワカメ","10m38cm5mm",58.648902893066406,1,0.800000011920929,1038.5],["Gymnasium","タイイクカン","47m45cm9mm",5597.0947265625,1,0.800000011920929,4745.9],["Ham","ハム","34cm",0.0020606499165296555,19,0.800000011920929,34.0],["Hanging Bars","ウンテイ","6m36cm",13.475030899047852,3,0.800000011920929,636.0],["Hara Residence","ハラ家","16m30cm8mm",227.1221466064453,2,0.800000011920929,1630.8],["Hatchback","ハッチバック","5m79cm9mm",10.212808609008789,3,0.800000011920929,579.9],["Hour Hand","タンシン","1m30cm3mm",0.11593014001846313,1,0.800000011920929,130.3],["Huge Falling Rock","ダイラクセキ","9m94cm2mm",51.468238830566406,2,0.800000011920929,994.2],["Huge Tree","キョボク","18m64cm",339.1141357421875,59,0.4000000059604645,1864.0],["Human Tower","ビックリカタグルマ","4m17cm1mm",3.8002736568450928,5,0.25,417.1],["Ice-Cream Freezer","オミセレイゾウコ","2m45cm5mm",0.7751493453979492,1,0.800000011920929,245.5],["Iron","アイロン","43cm8mm",0.004417564254254103,2,0.800000011920929,43.8],["Japanese Car","コクサンシャ","6m3cm",11.484186172485352,3,0.800000011920929,603.0],["Judo Contest","ジュウドウタイケツ","2m60cm",0.9205762147903442,1,0.800000011920929,260.0],["Judo Wrestler","ジュウドウカ","2m10cm3mm",0.4870827794075012,4,0.800000011920929,210.3],["Jumbo Umbrella","ジャンボカサ","2m87cm8mm",1.248287320137024,3,0.800000011920929,287.8],["Jungle Gym","ジャングルジム","7m33cm1mm",20.63188934326172,1,0.800000011920929,733.1],["Kelp Factory","ワカメコウジョウ","34m60cm9mm",2170.7177734375,1,0.800000011920929,3461.0],["Kerosene Tank","トウユタンク","79cm5mm",0.026333574205636978,4,0.800000011920929,79.5],["Kettle","ヤカン","72cm9mm",0.02032402530312538,5,0.800000011920929,72.9],["Kid's Boot","コドモナガグツ","40cm7mm",0.0035514524206519127,1,0.800000011920929,40.7],["Killer Move","ジゴクグルマ","2m60cm",0.9211004972457886,2,0.800000011920929,260.0],["Kimono","キモノ","2m48cm3mm",0.8022709488868713,3,0.800000011920929,248.3],["Ladder","ハシゴ","1m96cm4mm",0.39715632796287537,2,0.800000011920929,196.4],["Lamp Post","ガイトウ","2m8cm9mm",0.4778924286365509,8,0.800000011920929,208.9],["Laundry Deck","モノホシダイ","1m50cm",0.17682935297489166,6,0.800000011920929,150.0],["Laundry Pole","モノホシザオ","1m30cm",0.1150694489479065,4,0.05000000074505806,130.0],["Light Truck","ケイトラ","5m44cm5mm",8.453941345214844,5,0.800000011920929,544.5],["Lighthouse","トウダイ","18m18cm1mm",314.7139587402344,1,0.800000011920929,1818.1],["Lion Fountain","フンスイライオン","9m8cm9mm",39.32612228393555,1,0.800000011920929,908.9],["Lion Paw","ライオンハンド","2m58cm",0.8996570706367493,2,0.800000011920929,258.0],["Log","マルタ","1m32cm4mm",0.12171348184347153,32,0.800000011920929,132.4],["Log Cabin","マルタゴヤ","8m65cm3mm",33.92703628540039,2,0.800000011920929,865.3],["Log Fence","マルタサク","3m49cm7mm",2.239898920059204,24,0.800000011920929,349.7],["Lollipop","キャンディ","18cm5mm",0.00033393758349120617,1,0.800000011920929,18.5],["Lotus Leaf","ハスハッパ","1m21cm",0.09292120486497879,4,0.800000011920929,121.0],["Lucky Cat","マネキネコ","68cm8mm",0.017108621075749397,2,0.4000000059604645,68.8],["Mailbox","ポスト","1m44cm4mm",0.1578499972820282,2,0.7200000286102295,144.4],["Majima Residence","マジマ家","16m30cm8mm",227.1221466064453,1,0.800000011920929,1630.8],["Man","マン","1m65cm4mm",0.23717208206653595,12,0.800000011920929,165.4],["Manhole Cover","マンホール","59cm",0.010799999348819256,4,0.4000000059604645,59.0],["Manneken Pis","ショウベンコゾウ","1m45cm8mm",0.16247306764125824,1,0.800000011920929,145.8],["Marlin Building","イワナビル","23m8cm8mm",644.4073486328125,1,0.800000011920929,2308.8],["Matsuo Residence","マツオ家","15m83cm6mm",207.95584106445312,1,0.800000011920929,1583.6],["Matsuri Tent","カセツテント","8m29cm2mm",29.8560848236084,2,0.800000011920929,829.2],["Merman","ニンギョマン","2m11cm5mm",0.4953914284706116,1,0.800000011920929,211.5],["Metal Bucket","ブリキバケツ","1m26cm2mm",0.1053967997431755,2,0.800000011920929,126.2],["Middle School","チュウガッコウ","51m20cm7mm",7030.7880859375,1,0.800000011920929,5120.7],["Minute Hand","チョウシン","1m33cm7mm",0.12535744905471802,1,0.800000011920929,133.7],["Momotaro","モモタロウ","1m5mm",0.05318361893296242,2,0.800000011920929,100.5],["Monster Truck","モンスタートラック","8m37cm3mm",30.74195671081543,2,0.6600000262260437,837.3],["Monument","キネンヒ","3m84cm8mm",2.9841723442077637,1,0.800000011920929,384.8],["Morning Glory","アサガオ","93cm",0.0421307273209095,5,0.800000011920929,93.0],["Mortar","ウス","93cm6mm",0.043019089847803116,1,0.800000011920929,93.6],["Mushroom (L)","キノコ","11m62cm",82.16590881347656,2,0.800000011920929,1162.0],["New Hotel Building","ホテルシンカン","32m44cm8mm",1788.9742431640625,1,0.800000011920929,3244.9],["New Hotel Sign","シンカンカンバン","7m76cm8mm",24.547086715698242,1,0.800000011920929,776.8],["Nikaido Residence","ニカイドウ家","14m81cm1mm",170.12966918945312,1,0.800000011920929,1481.1],["Noguchi Residence","ノグチ家","15m83cm6mm",207.95584106445312,1,0.800000011920929,1583.6],["Nurse","ナース","1m57cm1mm",0.20308563113212585,1,0.800000011920929,157.1],["Old Salt","ウミノオトコ","1m79cm1mm",0.30091533064842224,2,0.800000011920929,179.1],["Outfielder","ヤシュ","1m84cm",0.32668256759643555,3,0.800000011920929,184.0],["Ox","ヤギュウ","5m49cm1mm",8.672933578491211,6,0.800000011920929,549.1],["Palm Tree","ヤシ","6m44cm4mm",14.016843795776367,45,0.800000011920929,644.4],["Panda Balloon","パンダバルーン","16m77cm2mm",247.06088256835938,2,0.5,1677.2],["Panda Ride","パンダカー","2m99cm1mm",1.4011447429656982,5,0.800000011920929,299.1],["Panda Sign","パンダカンバン","6m58cm4mm",14.945001602172852,3,0.800000011920929,658.4],["Pansies","パンジー","65cm2mm",0.014515197835862637,4,0.4000000059604645,65.2],["Park Entrance","パークイリグチ","8m44cm9mm",31.58185386657715,1,0.6600000262260437,844.9],["Park Fence","パークサク","1m34cm",0.12599998712539673,9,0.800000011920929,134.0],["Park Lamp Post","コウエンガイトウ","3m15cm6mm",1.6464000940322876,20,0.800000011920929,315.6],["Park Map","パークマップ","2m32cm2mm",0.656138002872467,1,0.800000011920929,232.2],["Parking Garage","パーキング","24m44cm6mm",765.0208740234375,1,0.800000011920929,2444.6],["Parking Lot","チュウシャジョウ","3m66cm2mm",2.5727522373199463,1,0.800000011920929,366.2],["Parking Lot Sign","パーキングカンバン","7m31cm6mm",20.510759353637695,1,0.800000011920929,731.6],["Parking Turntable","ターンテーブル","8m64cm9mm",33.88212203979492,5,0.800000011920929,864.9],["Pay Phone","コウシュウデンワ","1m45cm",0.15974581241607666,3,0.800000011920929,145.0],["Pedestrian Signal","ホコウシャシンゴウ","2m72cm2mm",1.0564448833465576,3,0.800000011920929,272.2],["Penguin","ペンギン","1m26cm1mm",0.10512624680995941,7,0.800000011920929,126.1],["Phone Booth","デンワボックス","3m33cm",1.9339754581451416,4,0.800000011920929,333.0],["Photo Booth","マチカドシャシンキ","3m45cm9mm",2.1671998500823975,2,0.800000011920929,345.9],["Pickle Tub","ツケモノ","1m8cm9mm",0.06770820915699005,2,0.800000011920929,108.9],["Pier","サンバシ","16m70cm2mm",243.9732666015625,1,0.800000011920929,1670.2],["Pigeon","ハト","35cm7mm",0.002382951555773616,2,0.5,35.7],["Pineapple","パイナップル","65cm",0.014386964030563831,5,0.800000011920929,65.0],["Pink Balloon","モモフウセン","89cm7mm",0.037802550941705704,1,0.800000011920929,89.7],["Pitcher","ピッチャー","1m98cm7mm",0.41133806109428406,3,0.800000011920929,198.7],["Pizza Delivery Bike","ピザバイク","3m36cm4mm",1.994712233543396,1,0.800000011920929,336.4],["Planting Fence","ミニサク","44cm6mm",0.004651285242289305,9,0.800000011920929,44.6],["Plastic Bench","ベンチ","1m79cm1mm",0.30086442828178406,2,0.800000011920929,179.1],["Plastic Greenhouse","ビニールハウス","13m8cm4mm",117.28357696533203,1,0.6000000238418579,1308.4],["Playful Punk","ハコノリヤンキー","1m55cm5mm",0.19696646928787231,4,0.800000011920929,155.5],["Policeman","オマワリサン","1m82cm8mm",0.3203490078449249,3,0.800000011920929,182.8],["Pool Ring","ウキワ","89cm",0.03691231831908226,4,0.800000011920929,89.0],["Pool Ring","ウキワ","89cm",0.03691231831908226,12,0.800000011920929,89.0],["Precious","オジョウチャン","1m2cm1mm",0.055798839777708054,1,0.800000011920929,102.1],["Prefab House","プレハブ","11m56cm9mm",81.08020782470703,1,0.800000011920929,1156.9],["Principal's Statue","コウチョウ像","1m99cm2mm",0.414180189371109,3,0.800000011920929,199.2],["Propane Tank","ガスボンベ","1m52cm7mm",0.1867147535085678,6,0.800000011920929,152.7],["Punk","ヤンキー","1m55cm5mm",0.1969568431377411,1,0.800000011920929,155.5],["Pylon","クイ","71cm3mm",0.019003529101610184,15,0.800000011920929,71.3],["Rabbit-Man","ウサギマン","2m30cm3mm",0.6400409936904907,1,0.800000011920929,230.3],["Radio Tower","デンパトウ","18m24cm7mm",318.1240234375,1,0.800000011920929,1824.7],["Ramen","ラーメン","46cm5mm",0.005286297295242548,1,0.800000011920929,46.5],["RC Boy","ラジオコントロールクン","1m11cm1mm",0.0719476267695427,1,0.800000011920929,111.1],["Red Ball","アカダマ","3m99cm9mm",3.3498575687408447,4,0.800000011920929,399.9],["Red Oil Drum","アカドラムカン","1m90cm6mm",0.36276015639305115,4,0.4000000059604645,190.6],["Regular Tree","ジュモク","9m48cm3mm",44.660858154296875,78,0.4000000059604645,948.3],["Relaxing Dude","クツロギマン","1m66cm",0.2397872358560562,6,0.800000011920929,166.0],["Rich Haul Flag #2","タイリョウハタ","5m93cm7mm",10.959465980529785,1,0.800000011920929,593.7],["Rich Haul Flag #4","ウミノサチ","7m12cm3mm",18.92765998840332,1,0.800000011920929,712.3],["Roast On Bone","ホネツキニク","50cm",0.006577654276043177,12,0.800000011920929,50.0],["Rocking Horse","バネウマ","1m56cm",0.19879814982414246,3,0.800000011920929,156.0],["Rubber Boot","ゴムナガ","58cm6mm",0.010582027956843376,2,0.800000011920929,58.6],["Ryokan","リョカン","42m44cm6mm",4004.24365234375,1,0.800000011920929,4244.6],["Ryokan Sign","ミ","6m1cm4mm",11.391388893127441,2,0.800000011920929,601.4],["Ryokan Sign","チ","6m1cm4mm",11.391388893127441,2,0.800000011920929,601.4],["Ryokan Sign","リョ","6m1cm4mm",11.391388893127441,1,0.800000011920929,601.4],["Ryokan Sign","カン","6m1cm4mm",11.391388893127441,1,0.800000011920929,601.4],["Sailboat Rental","カシボートテン","13m46cm1mm",127.72545623779297,1,0.6600000262260437,1346.1],["Saito Residence","ウメモト家","15m89cm8mm",210.41806030273438,1,0.800000011920929,1589.8],["Scarecrow","カカシ","2m46cm2mm",0.7813898921012878,1,0.800000011920929,246.2],["Scattered Clouds","チギレグモ","6m44cm7mm",14.035418510437012,1,0.800000011920929,644.7],["School Clocktower","ショウガクトケイダイ","19m5cm3mm",362.2015075683594,1,0.800000011920929,1905.3],["School Gate","コウモン","6m64cm2mm",15.348057746887207,1,0.800000011920929,664.2],["School Sign (Ga)","ガッ","2m44cm9mm",0.7696921825408936,1,0.800000011920929,244.9],["School Sign (Ko)","コウ","2m44cm9mm",0.7696921825408936,1,0.800000011920929,244.9],["School Sign (Ni)","ニ","2m44cm9mm",0.7696921825408936,2,0.800000011920929,244.9],["School Sign (U)","ウ","2m44cm9mm",0.7696921825408936,2,0.800000011920929,244.9],["Sea Anemone","イソギンチャク","55cm6mm",0.009041071869432926,5,0.800000011920929,55.6],["Sea Otter","ラッコ","1m12cm2mm",0.07408621162176132,5,0.800000011920929,112.2],["Sea Turtle","ウミガメ","2m73cm6mm",1.0726410150527954,3,0.800000011920929,273.6],["Seat Cushion","ザブトン","69cm3mm",0.017499998211860657,2,0.800000011920929,69.3],["Shoji","ショウジ","1m31cm",0.11778576672077179,12,0.25999999046325684,131.0],["Shopping Cart","カイモノカート","1m45cm6mm",0.16191650927066803,5,0.6000000238418579,145.6],["Shovel","ショベル","85cm",0.032176196575164795,1,0.35600000619888306,85.0],["Siamese Cat","シャムネコ","71cm9mm",0.019485585391521454,1,0.5,71.9],["Sidewalk Marker","ホドウクイ","1m41cm1mm",0.14731353521347046,5,0.800000011920929,141.1],["Silo","サイロ","22m48cm2mm",595.0394897460938,3,0.800000011920929,2248.2],["Skinny","セイタカマン","1m65cm8mm",0.23897632956504822,5,0.800000011920929,165.8],["Slide","スベリダイ","6m58cm3mm",14.942439079284668,1,0.800000011920929,658.3],["Sliding Door","フスマ","1m53cm9mm",0.1909414529800415,7,0.25999999046325684,153.9],["Sliding Door","フスマ","1m59cm4mm",0.2121572196483612,15,0.25999999046325684,159.4],["Small Fishing Boat","ミニギョセン","11m47cm2mm",79.05933380126953,1,0.800000011920929,1147.2],["Smokestack","オフロエントツ","14m69cm3mm",166.1185302734375,2,0.800000011920929,1469.3],["Smokestack","コウジョウエントツ","22m80cm6mm",621.1159057617188,1,0.800000011920929,2280.6],["Snowman","ユキダルマ","1m45cm8mm",0.1623387634754181,1,0.800000011920929,145.8],["Soccer Goal","サッカーゴール","8m55cm6mm",32.80127716064453,2,0.800000011920929,855.6],["Spirit of Fun","タノシミ","3m56cm3mm",2.3696210384368896,1,0.800000011920929,356.3],["Squared Shrubbery","シカクウエコミ","2m24cm3mm",0.5913482308387756,13,0.4000000059604645,224.3],["Stilts","タケウマ","1m61cm4mm",0.22032959759235382,2,0.800000011920929,161.4],["Stingray Building","クマノミビル","29m85cm",1392.69091796875,1,0.800000011920929,2985.0],["Storekeeper","アキンド","1m78cm1mm",0.2962722182273865,2,0.800000011920929,178.1],["Street Stall","デミセ","5m99cm5mm",11.287064552307129,2,0.800000011920929,599.5],["Summer Skinny","サマーセイタカサン","1m54cm1mm",0.19173431396484375,1,0.800000011920929,154.1],["Sumo Bout","スモウタイケツ","4m4cm",3.4530935287475586,1,0.800000011920929,404.0],["Sumo Wrestler","スモウレスラー","3m1mm",1.415829062461853,4,0.800000011920929,300.1],["Sunflower","ヒマワリ","1m20cm",0.09052902460098267,17,0.800000011920929,120.0],["Supermarket","スーパーマーケット","24m17cm1mm",739.4861450195312,1,0.800000011920929,2417.1],["Supermarket Sign","スーパーカンバン","13m13cm6mm",118.70552825927734,1,0.800000011920929,1313.6],["Surfboard","サーフボード","1m38cm5mm",0.13912494480609894,3,0.800000011920929,138.5],["Swimsuit Girl","ミズギオネエサン","1m40cm1mm",0.14426419138908386,4,0.800000011920929,140.1],["Swordfish","カジキマグロ","14m23cm",150.88235473632812,1,0.800000011920929,1423.0],["Tabby Cat","トラネコ","64cm2mm",0.013918275013566017,1,0.5,64.2],["Taiko Drum","ワダイコ","2m40cm5mm",0.7286826968193054,4,0.800000011920929,240.5],["Tall Schoolboy","セイタカクン","1m75cm3mm",0.2824784517288208,2,0.800000011920929,175.3],["Tall Totem Pole","ロングトーテムポール","14m25cm5mm",151.68577575683594,1,0.800000011920929,1425.5],["Telephone","デンワ","52cm8mm",0.007740661967545748,1,0.800000011920929,52.8],["Telephone Pole","デンチュウ","6m41cm1mm",13.798263549804688,7,0.800000011920929,641.1],["Thermos Pot","ポット","51cm1mm",0.007020827382802963,5,0.800000011920929,51.1],["Tire","タイヤ","1m14cm9mm",0.07951813191175461,9,0.800000011920929,114.9],["Totem Pole","トーテムポール","9m26cm7mm",41.67250442504883,1,0.800000011920929,926.7],["Towel Guy","ハダカ","1m67cm3mm",0.24524016678333282,11,0.800000011920929,167.3],["Toy Dispenser","ガチャガチャ","1m9cm4mm",0.06856457889080048,1,0.800000011920929,109.4],["Tractor","トラクター","6m14cm5mm",12.155560493469238,1,0.800000011920929,614.5],["Traffic Mirror","ミラー","2m29cm6mm",0.6339235305786133,2,0.800000011920929,229.6],["Traffic Signal","シンゴウキ","6m34cm1mm",13.350749015808105,4,0.800000011920929,634.1],["Trash Can","ゴミカゴ","1m30cm2mm",0.11569944769144058,6,0.800000011920929,130.2],["Trawler","ダイギョセン","28m48cm1mm",1209.7371826171875,1,0.800000011920929,2848.1],["Treasure Chest","オタカラ","2m2cm1mm",0.4322147071361542,1,0.800000011920929,202.1],["Trophy","トロフィー","60cm9mm",0.011871562339365482,7,0.800000011920929,60.9],["Truck","トラック","10m10cm6mm",65.5941390991211,1,0.6600000262260437,1078.0],["Tuna","マグロ","1m67cm8mm",0.24766919016838074,3,0.800000011920929,167.8],["TV Camera","テレビカメラ","2m77cm5mm",1.119301676750183,3,0.800000011920929,277.5],["TV Station","テレビキョク","43m43cm5mm",4290.76220703125,1,0.800000011920929,4343.5],["Umbrella","アマガサ","1m35cm3mm",0.12986798584461212,1,0.800000011920929,135.3],["Van","ワンボックス","6m83cm6mm",16.73212432861328,2,0.800000011920929,683.6],["Vegetable Carton","ヤサイダンボール","1m80cm",0.30542662739753723,5,0.800000011920929,180.0],["Vending Machine","アカジハンキ","2m72cm1mm",1.055168867111206,9,0.800000011920929,272.1],["Vending Machine","アオジハンキ","2m72cm1mm",1.055168867111206,2,0.800000011920929,272.1],["Wall (Long)","ヘイ","7m81cm1mm",24.959997177124023,16,0.07999999821186066,781.1],["Wall (Short)","カベ","5m46cm9mm",8.569598197937012,2,0.07999999821186066,546.9],["Washing Machine","センタクキ","2m35cm7mm",0.6864125728607178,1,0.800000011920929,235.7],["Water Tap","スイドウ","1m24cm4mm",0.1010260134935379,2,0.800000011920929,124.4],["Watermelon Boy","スイカワリ","1m30cm",0.11524491757154465,6,0.800000011920929,130.0],["Weather Station","ヒャクヨウバコ","3m62cm6mm",2.4973955154418945,2,0.800000011920929,362.6],["Wedding Cake","ウェディングケーキ","1m81cm",0.31073153018951416,6,0.800000011920929,181.0],["Welcome Mat","オミセマット","55cm1mm",0.008799998089671135,4,0.800000011920929,55.1],["Wheelbarrow","テオシグルマ","2m26cm4mm",0.6077322959899902,1,0.800000011920929,226.4],["White Sheep","シロヒツジ","1m67cm1mm",0.24442674219608307,8,0.800000011920929,167.1],["White Wall","シラカベ","2m90cm",1.277449607849121,19,0.800000011920929,290.0],["Windmill","フウシャ","45m45cm4mm",4917.337890625,2,0.800000011920929,4545.4],["Wooden Bench","エンダイ","1m84cm",0.3265085220336914,1,0.800000011920929,184.0],["Wooden Bench","モクセイベンチ","1m92cm1mm",0.3715367019176483,2,0.800000011920929,192.1],["Wooden Box","キバコ","97cm8mm",0.04899999499320984,7,0.800000011920929,97.8],["Yellow Squash","キカボチャ","57cm4mm",0.009912778623402119,2,0.800000011920929,57.4]]/*END*/;
+const OBJS = RAW.map(([name, ja, size, volume, placed, gain, catchCm], i) => ({ i, name, ja, size, volume, placed, gain, catchCm, key: name.toLowerCase() }));
+const f32 = Math.fround;
+const PI43 = 4 / 3 * Math.PI;
+
+// Katamari volume (m³) for a HUD diameter in cm, and the inverse.
+const volAt = dcm => f32(PI43 * Math.pow((dcm / 2 - 0.01) / 100, 3));
+const diamAt = v => 200 * Math.cbrt(v / PI43) + 0.02;
+
+// Same as the game: count = katamariVolume / monoVolume, written out with ToString("#").
+function countFor(V, vol) {
+  if (vol >= V * f32(0.98)) return vol < V * f32(1.02) ? 1 : null;
+  return Math.round(f32(V / vol));
+}
+function fmtSize(dcm) {
+  const mm = Math.floor(dcm * 10 + 1e-6);
+  const m = Math.floor(mm / 1000), cm = Math.floor(mm % 1000 / 10), r = mm % 10;
+  return (m ? m + "m " : "") + String(cm).padStart(m ? 2 : 1, "0") + "cm " + r + "mm";
+}
+const fmtN = n => n.toLocaleString("en-US");
+const fmtStep = dcm => dcm >= 1 ? dcm.toFixed(1) + " cm" : (dcm * 10).toFixed(dcm * 10 >= 0.1 ? 2 : 3) + " mm";
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const $ = id => document.getElementById(id);
+const q = $("q"), list = $("list"), meta = $("meta");
+
+function targetCm() {
+  const v = id => Math.max(0, parseInt($(id).value, 10) || 0);
+  return v("tm") * 100 + v("tc") + v("tmm") / 10;
+}
+
+function score(o, s) {
+  if (!s) return 0;
+  const k = o.key, at = k.indexOf(s);
+  if (at === 0) return 1;
+  if (at > 0) return /[\s("'-]/.test(k[at - 1]) ? 2 : 3;
+  if (o.ja.includes(s)) return 3;
+  return -1;
+}
+
+// Loose subsequence match for typos like "lolpop"; only used when nothing matches directly.
+function fuzzy(o, s) {
+  let j = 0;
+  for (const ch of o.key) if (ch === s[j]) j++;
+  return j === s.length;
+}
+
+function highlight(name, s) {
+  const at = s ? name.toLowerCase().indexOf(s) : -1;
+  if (at < 0) return esc(name);
+  return esc(name.slice(0, at)) + "<mark>" + esc(name.slice(at, at + s.length)) + "</mark>" + esc(name.slice(at + s.length));
+}
+
+function render() {
+  const s = q.value.trim().toLowerCase();
+  const D = targetCm();
+  const V = volAt(D);
+  const lo = volAt(Math.floor(D)), hi = volAt(Math.floor(D) + 1);
+  let hits = OBJS.map(o => [score(o, s), o]).filter(([sc]) => sc >= 0);
+  if (!hits.length) hits = OBJS.filter(o => fuzzy(o, s)).map(o => [4, o]);
+  hits.sort((a, b) => a[0] - b[0] || a[1].key.localeCompare(b[1].key) || a[1].volume - b[1].volume);
+  const shown = hits.slice(0, s ? 60 : 40);
+  meta.textContent = `Target ${fmtSize(D)} → katamari volume ${V.toFixed(2)} m³ · ` +
+    (s ? `${hits.length} match${hits.length === 1 ? "" : "es"}` : `${OBJS.length} objects in the North Star stage`) +
+    (hits.length > shown.length ? ` (showing ${shown.length})` : "");
+  if (!shown.length) { list.innerHTML = `<li class="empty">No object matches “${esc(q.value)}”.</li>`; return; }
+  list.innerHTML = shown.map(([, o]) => {
+    const n = countFor(V, o.volume);
+    const head = `<div class="row"><div class="name">${highlight(o.name, s)}<span class="ja">${esc(o.ja)}</span></div>`;
+    if (n === null) {
+      return `<li class="obj">${head}<div class="count na">Too big at this size</div></div>
+        <div class="details"><span>Pick-up size <b>${esc(o.size)}</b></span></div></li>`;
+    }
+    const a = countFor(lo, o.volume), b = countFor(f32(hi * (1 - 1e-7)), o.volume);
+    const step = diamAt(V + o.volume) - diamAt(V);
+    return `<li class="obj" data-i="${o.i}">${head}<div class="count">${fmtN(n)}<small>at ${fmtSize(D)}</small></div></div>
+      <div class="details">
+        <span>While HUD shows ${fmtSize(Math.floor(D)).replace(/ \d+mm$/, "")}: <b>${fmtN(a)}${a !== b ? "–" + fmtN(b) : ""}</b></span>
+        <span>Per object <b>${fmtStep(step)}</b></span>
+        <span>Pick-up size <b>${esc(o.size)}</b></span>
+        <span>In stage <b>${o.placed}</b></span>
+      </div>
+      <div class="rev"><label for="r${o.i}" style="margin:0;text-transform:none;letter-spacing:0;font-size:.88rem">I see</label>
+        <input id="r${o.i}" type="number" min="1" inputmode="numeric" placeholder="count">
+        <output for="r${o.i}"></output><button class="use" type="button" hidden>Use this size</button></div></li>`;
+  }).join("");
+}
+
+list.addEventListener("input", e => {
+  const inp = e.target.closest(".rev input");
+  if (!inp) return;
+  const o = OBJS[+inp.closest("li").dataset.i];
+  const out = inp.nextElementSibling, n = parseInt(inp.value, 10);
+  const use = out.nextElementSibling;
+  if (!(n > 0)) { out.textContent = ""; out.className = ""; use.hidden = true; return; }
+  const a = diamAt(Math.max(n - 0.5, 0) * o.volume), b = diamAt((n + 0.5) * o.volume);
+  use.hidden = false; use.dataset.lo = a; use.dataset.hi = b;
+  const D = targetCm();
+  const sa = fmtSize(a), sb = fmtSize(b);
+  const delta = (a + b) / 2 - D;
+  out.className = Math.abs(delta) < 0.05 ? "good" : "";
+  out.textContent = `→ ${sa === sb ? sa : sa + " – " + sb}` +
+    (Math.abs(delta) < 0.05 ? "  ✓ on target" : `  (${delta > 0 ? "+" : "−"}${fmtStep(Math.abs(delta))} vs target)`);
+});
+
+// North Star's pickup scaling by katamari diameter (cm), from the game's native table.
+const CURVE = [[0, 1], [1000, 0.8], [1150, 0.5], [1300, 0.1]];
+function kAt(d) {
+  for (let j = 1; j < CURVE.length; j++) {
+    const [x0, y0] = CURVE[j - 1], [x1, y1] = CURVE[j];
+    if (d < x1) return y0 + (y1 - y0) * (d - x0) / (x1 - x0);
+  }
+  return CURVE[CURVE.length - 1][1];
+}
+
+// Current size as a range of diameters (cm): a HUD reading covers 1 mm; a pause count can cover more.
+let cur = null, example = true;
+const hudCm = () => {
+  const v = id => Math.max(0, parseInt($(id).value, 10) || 0);
+  return v("cm_m") * 100 + v("cm_c") + v("cm_mm") / 10;
+};
+const overlap = (a0, a1, b0, b1) => Math.max(0, Math.min(a1, b1) - Math.max(a0, b0));
+
+function renderGap() {
+  const [dlo, dhi] = cur || [hudCm(), hudCm() + 0.1];
+  const T = Math.floor(targetCm());
+  const Wlo = volAt(T), Whi = volAt(T + 1);
+  const Vlo = volAt(dlo), Vhi = volAt(dhi);
+  const status = $("gapStatus"), note = $("gapNote"), out = $("gapList");
+  const tLabel = fmtSize(T).replace(/ \d+mm$/, "");
+  const src = cur ? `From the pause count you are ${fmtSize(dlo)} – ${fmtSize(dhi)}.` : example ? "Example size shown. Enter yours." : "";
+  if (dlo >= T && dhi <= T + 1) {
+    status.className = "status done"; status.textContent = `On ${tLabel}. Stop rolling!`;
+    note.textContent = src; out.innerHTML = ""; return;
+  }
+  if (dlo >= T + 1) {
+    status.className = "status over"; status.textContent = `Past ${tLabel}`;
+    note.textContent = (src ? src + " " : "") + "A katamari can't shrink, so nothing you pick up now will get you back to this target.";
+    out.innerHTML = ""; return;
+  }
+  const gapCm = T - (dlo + dhi) / 2;
+  status.className = "status"; status.textContent = gapCm > 0 ? `${fmtStep(gapCm)} to go` : "Straddling the target";
+  const k = kAt(((dlo + dhi) / 2 + T + 0.5) / 2);
+  const picks = [];
+  for (const o of OBJS) {
+    if (o.catchCm > dlo) continue;
+    const g = k * o.volume * o.gain;
+    const nmin = Math.max(1, Math.ceil((Wlo - Vlo) / g)), nmax = Math.min(Math.ceil((Whi - Vhi) / g) - 1, o.placed);
+    const grow = diamAt((Vlo + Vhi) / 2 + g) - diamAt((Vlo + Vhi) / 2);
+    if (nmin <= nmax && nmin <= 99) { picks.push({ o, sure: true, a: nmin, b: nmax, odds: 1, grow }); continue; }
+    // Not certain: take the count with the best chance of landing on the target.
+    const n = Math.max(1, Math.round(((Wlo + Whi) - (Vlo + Vhi)) / 2 / g));
+    if (n > o.placed || n > 99) continue;
+    const odds = Vhi > Vlo ? overlap(Vlo + n * g, Vhi + n * g, Wlo, Whi) / (Vhi - Vlo) : 0;
+    if (odds >= 0.5) picks.push({ o, sure: false, a: n, b: n, odds, grow });
+  }
+  picks.sort((x, y) => (y.sure - x.sure) || (y.odds - x.odds) || (x.a - y.a) || (y.o.placed - x.o.placed));
+  const sure = picks.filter(p => p.sure).length;
+  const shown = picks.slice(0, Math.max(8, Math.min(sure, 12)));
+  note.textContent = (src ? src + " " : "") + (picks.length
+    ? `${sure} sure pick${sure === 1 ? "" : "s"}${picks.length > sure ? `, ${picks.length - sure} likely` : ""}. Press one to look it up below.`
+    : "Nothing in the stage gets you there in 99 pickups or fewer. Roll a bit more and check again.");
+  out.innerHTML = shown.map(p => `<li><button type="button" data-name="${esc(p.o.name)}">
+      <span class="pick-n">${p.a === p.b ? p.a : p.a + "–" + p.b} ×</span>
+      <span class="pick-name">${esc(p.o.name)}</span>
+      <span class="pick-meta">+${fmtStep(p.grow)} each · ${p.o.placed} in stage</span>
+      ${p.sure ? "" : `<span class="pick-odds">About a ${Math.round(p.odds * 100)}% chance, since your exact size isn't known</span>`}
+    </button></li>`).join("");
+}
+
+$("gapList").addEventListener("click", e => {
+  const b = e.target.closest("button[data-name]");
+  if (b) { q.value = b.dataset.name; render(); q.scrollIntoView({ block: "nearest" }); }
+});
+list.addEventListener("click", e => {
+  const b = e.target.closest("button.use");
+  if (!b) return;
+  const lo = +b.dataset.lo, hi = +b.dataset.hi, mm = Math.floor((lo + hi) / 2 * 10);
+  cur = [lo, hi]; example = false;
+  $("cm_m").value = Math.floor(mm / 1000); $("cm_c").value = Math.floor(mm % 1000 / 10); $("cm_mm").value = mm % 10;
+  renderGap();
+  $("gapTitle").scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+});
+for (const id of ["cm_m", "cm_c", "cm_mm"]) $(id).addEventListener("input", () => { cur = null; example = false; renderGap(); });
+
+let t;
+q.addEventListener("input", () => { clearTimeout(t); t = setTimeout(render, 40); });
+for (const id of ["tm", "tc", "tmm"]) $(id).addEventListener("input", () => { render(); renderGap(); });
+q.addEventListener("keydown", e => { if (e.key === "Escape") { q.value = ""; render(); } });
+render();
+renderGap();
+</script>
+</body>
+</html>
